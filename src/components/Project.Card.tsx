@@ -1,4 +1,18 @@
+import { Github } from "lucide-react";
+import React from 'react';
+interface Project {
+    imageURL: string;
+    title: string;
+    description: string;
+    topics: string[];
+    liveURL: string;
+    githubURL: string;
+}
 
+interface ProjectCardProps {
+    project: Project;
+    index: number;
+}
 
 const ProjectCard = () => {
     const topics = ["FrontEnd", "React", "Tailwind", "TypeScript", "Package"]
@@ -29,6 +43,22 @@ const ProjectCard = () => {
                             )
                         }
 
+                    </div>
+                    <div className="flex gap-3 mt-auto">
+                           <a
+                        href=""
+                        target="_blank"
+                        className="flex-1 text-white bg-gradient-to-r from-slate-300 to-slate-400 hover:text-gray-100 hover:shadow-lg text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform transform-gpu hover:scale-[1.01]"
+                    >
+                        Live Demo
+                    </a>
+                    <a
+                        href="#"
+                        className="text-slate-500 hover:text-gray-400 transition-all duration-300 transform transform-gpu hover:scale-[1.1] p-2 rounded-lg hover:bg-gray-500/5"
+                    >
+                        <Github className="w-5 h-5" />
+                    </a>
+                       
                     </div>
                 </div>
             </div>
