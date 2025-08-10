@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import SectionTitle from './ui/SectionTitle';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -29,15 +30,11 @@ const Contact = () => {
             message: '',
         });
     };
-    const items = ["Mail", "Github", "Linkdin"];
+    const items = ['Mail', 'Github', 'Linkdin'];
     return (
         <section id="contact" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-                <div className="text-left mb-16">
-                    <h2 className="text-3xl md:text-5xl mb-6 font-bold text-gray-900">
-                        Get In Touch
-                    </h2>
-                </div>
+                <SectionTitle text="Get in Touch" />
 
                 <div className="grid md:grid-cols-2 gap-12">
                     <div>
@@ -45,27 +42,22 @@ const Contact = () => {
                             Let's Connect!
                         </h3>
                         <div className="space-y-6">
-                            {
-                                items.map((item) =>
-                                (
-                                    <a
-                                        href="mailto:zn.zibanouri@gmail.com"
-                                        className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"
-                                    >
-                                       
-                                        {/* <Mail className="w-6 h-6 text-gray-400 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" /> */}
-                                        <div>
-                                            <div className="font-medium">
-                                                {item}
-                                            </div>
-                                            <div className="text-slate-600 text-sm">
-                                               {item}
-                                            </div>
+                            {items.map((item) => (
+                                <a
+                                    href="mailto:zn.zibanouri@gmail.com"
+                                    className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"
+                                >
+                                    {/* <Mail className="w-6 h-6 text-gray-400 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" /> */}
+                                    <div>
+                                        <div className="font-medium">
+                                            {item}
                                         </div>
-                                    </a>
-
-                                ))
-                            }
+                                        <div className="text-slate-600 text-sm">
+                                            {item}
+                                        </div>
+                                    </div>
+                                </a>
+                            ))}
                             {/* <a
                                 href="mailto:zn.zibanouri@gmail.com"
                                 className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"

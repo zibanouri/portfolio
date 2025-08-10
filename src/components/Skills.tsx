@@ -1,4 +1,5 @@
 import { Code } from 'lucide-react';
+import SectionTitle from './ui/SectionTitle';
 
 const Skills = () => {
     const SkillCategory = [
@@ -9,10 +10,9 @@ const Skills = () => {
                 { name: 'TypeScript', level: 65 },
                 { name: 'Next.js', level: 35 },
                 { name: 'SCSS', level: 30 },
-                
             ],
         },
-         {
+        {
             title: 'Front-End',
             skills: [
                 { name: 'Html', level: 90 },
@@ -21,7 +21,7 @@ const Skills = () => {
                 { name: 'Tailwind', level: 75 },
             ],
         },
-         {
+        {
             title: 'Front-End',
             skills: [
                 { name: 'Javascript', level: 50 },
@@ -34,11 +34,8 @@ const Skills = () => {
     return (
         <section id="skills" className="py-20 px-4 bg-gray-50 text-gray-800">
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl text-left md:text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-800 bg-clip-text text-transparent">
-                        Skills
-                    </h2>
-                </div>
+                <SectionTitle text="Skills Me" />
+
                 <div className="grid md:grid-cols-3 gap-8">
                     {SkillCategory.map((category) => (
                         <div

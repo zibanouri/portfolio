@@ -1,4 +1,5 @@
 import { User, Code, Download } from 'lucide-react';
+import SectionTitle from './ui/SectionTitle';
 
 const About = () => {
     const iDo = [
@@ -15,11 +16,7 @@ const About = () => {
             className="py-20 px-4 relative min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 "
         >
             <div className="max-w-6xl mx-auto">
-                <div className="text-left mb-16">
-                    <h2 className="text-4xl text-left md:text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-800 bg-clip-text text-transparent">
-                        About Me
-                    </h2>
-                </div>
+                <SectionTitle text="About Me" />
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="bg-slate-400/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300">
