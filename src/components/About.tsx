@@ -12,11 +12,11 @@ const About = () => {
     return (
         <section
             id="about"
-            className="py-20 px-4 relative min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50"
+            className="py-20 px-4 relative min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 "
         >
             <div className="max-w-6xl mx-auto">
                 <div className="text-left mb-16">
-                    <h2 className="text-5xl font-serif md:text-5xl bg-gradient-to-br from-pink-100 to-gray-300 rounded-2xl w-60 h-15 m-1.5 p-2">
+                    <h2 className="text-4xl text-left md:text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-800 bg-clip-text text-transparent">
                         About Me
                     </h2>
                 </div>

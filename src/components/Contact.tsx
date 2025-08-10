@@ -40,9 +40,10 @@ const Contact = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12">
-            
                     <div>
-                        <h3 className="text-2xl font-semibold mb-8">Let's Connect!</h3>
+                        <h3 className="text-2xl font-semibold mb-8">
+                            Let's Connect!
+                        </h3>
                         <div className="space-y-6">
                             <a
                                 href="mailto:zn.zibanouri@gmail.com"
@@ -90,7 +91,10 @@ const Contact = () => {
                     <div>
                         <form onSubmit={handleSubmit}>
                             <div className="mt-3">
-                                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium mb-1"
+                                >
                                     Name
                                 </label>
                                 <input
@@ -106,7 +110,10 @@ const Contact = () => {
                             </div>
 
                             <div className="mt-3">
-                                <label htmlFor="email" className="block text-sm font-medium mb-1">
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium mb-1"
+                                >
                                     Email
                                 </label>
                                 <input
@@ -122,7 +129,10 @@ const Contact = () => {
                             </div>
 
                             <div className="mt-3">
-                                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                                <label
+                                    htmlFor="message"
+                                    className="block text-sm font-medium mb-1"
+                                >
                                     Message
                                 </label>
                                 <textarea
@@ -147,7 +157,7 @@ const Contact = () => {
                                 </button>
                             </div>
                         </form>
-                         {isSubmitted && (
+                        {isSubmitted && (
                             <div
                                 id="toast-success"
                                 className="show-notification flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800"
