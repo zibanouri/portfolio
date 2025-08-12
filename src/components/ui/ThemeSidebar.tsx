@@ -1,4 +1,4 @@
-import { Sun, Moon } from "lucide-react";
+import { SunMoon, Moon, Palette } from 'lucide-react';
 
 const ThemeSidebar = () => {
     return (
@@ -13,6 +13,12 @@ const ThemeSidebar = () => {
                     <button className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors duration-300">
                         <Moon className="w-4 h-4 text-slate-700" />
                     </button>
+                </div>
+                 <div>
+                    <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700">
+                        <Palette className="w-4 h-4 mr-2" />
+                        Color Themes
+                    </h3>
                 </div>
 
             </div>
