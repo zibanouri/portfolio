@@ -4,31 +4,34 @@ import SectionTitle from './ui/SectionTitle';
 const Skills = () => {
     const SkillCategory = [
         {
-            title: 'Front-End',
+            title: 'Fundamentals',
             skills: [
-                { name: 'React', level: 40 },
-                { name: 'TypeScript', level: 65 },
-                { name: 'Next.js', level: 35 },
-                { name: 'SCSS', level: 30 },
+                { name: 'HTML', level: 40 },
+                { name: 'CSS', level: 65 },
+                { name: 'javascript', level: 35 },
             ],
         },
+        
         {
-            title: 'Front-End',
+            title: 'Tools for Better ',
             skills: [
-                { name: 'Html', level: 90 },
-                { name: 'Css', level: 80 },
-                { name: 'Github', level: 55 },
-                { name: 'Tailwind', level: 75 },
+                { name: 'SASS/SCSS', level: 90 },
+                { name: 'TailwindCSS', level: 80 },
+                { name: 'Git + GitHub', level: 55 },
+                { name: ' Bootstrap', level: 75 },
             ],
         },
+        
         {
-            title: 'Front-End',
+            title: 'Frameworks',
             skills: [
-                { name: 'Javascript', level: 50 },
-                { name: 'Sass', level: 50 },
-                { name: 'Bootstrap', level: 75 },
+                { name: 'React.js', level: 50 },
+                { name: 'State Management', level: 50 },
+                { name: 'Routing ', level: 75 },
             ],
         },
+        
+        
     ];
 
     return (

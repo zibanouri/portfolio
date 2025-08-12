@@ -20,8 +20,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group flex flex-col h-full">
             <div className="relative overflow-hidden">
                 <img
-                    src={'project.imageURL'}
-                    alt={'project.title'}
+                    src={project.imageURL}
+                    alt={project.title}
                     className="w-full h-full object-cover"
                 />
                 <div
@@ -31,16 +31,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
             <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-semibold mb-3 text-slate-800 group-hover:text-slate-600 duration-300 transition-colors">
-                    {'project.title'}
+                    {project.title}
                 </h3>
                 <p className="text-slate-600 text-sm mb-4 leading-relaxed flex-grow">
-                    {'project.description'}
+                    {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                     {project.topics.map((topic) => (
                         <span
                             key={topic}
-                            className="px-3 py-1 bg-slate-200 border border-slate-400 text-xs rounded-full font-medium"
+                            className="px-3 py-1 bg-slate-200 border border-slate-700 text-xs rounded-full font-medium hover:bg-slate-300"
                         >
                             {topic}
                         </span>
@@ -56,6 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     </a>
                     <a
                         href={project.githubURL}
+                        target="_blank"
                         className="text-slate-500 hover:text-gray-400 transition-all duration-300 transform transform-gpu hover:scale-[1.1] p-2 rounded-lg hover:bg-gray-500/5"
                     >
                         <Github className="w-5 h-5" />
