@@ -28,6 +28,7 @@ const Skills = () => {
                 { name: 'React.js', level: 50 },
                 { name: 'State Management', level: 50 },
                 { name: 'Routing ', level: 75 },
+                 { name: 'Node.js ', level: 75 },
             ],
         },
         
