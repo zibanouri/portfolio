@@ -65,21 +65,18 @@ const ThemeSidebar = () => {
                                     key={index}
                                     className="w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 cursor-pointer"
                                 >
+                                
                                     <span className="text-sm">{lang.name}</span>
                                 </button>
                             ))}
                         </div>
-                  
-
-
-                    
                 </div>
             </div>
 
         </div>
-           <button
+            <button
                 data-sidebar-toggle
-                className="fixed top-1/2 -translate-y-1/2 z-40 p-2 md:pd-3 transition-all duration-300 shadow-lg hover:shadow-xl bg-slate-400 hover:bg-slate-00 text-white rounded-lg border-0 outline-none right-80 cursor-pointer"
+                className="fixed top-1/2 -translate-y-1/2 z-40 p-2 md:pd-3 transition-all duration-300 shadow-lg hover:shadow-xl bg-purple-400 hover:bg-purple-600 text-white rounded-l-xl border-0 outline-none right-80 cursor-pointer"
             >
                 <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
             </button>
