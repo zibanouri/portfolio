@@ -1,4 +1,4 @@
-import { SunMoon, Moon, Palette } from 'lucide-react';
+import { SunMoon, Moon, Palette,Languages } from 'lucide-react';
 
 
 
@@ -45,6 +45,17 @@ const ThemeSidebar = () => {
                         ))}
 
                     </div>
+                </div>
+                 <div>
+                        <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700 mt-3">
+                            <Languages className="w-4 h-4 mr-2" />
+                            Languages
+                        </h3>
+                        <div className="space-y-2"></div>
+                <div>
+                    <h3>
+
+                    </h3>
                 </div>
 
             </div>
