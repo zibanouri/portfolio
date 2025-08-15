@@ -5,7 +5,7 @@ import Skills from '../components/Skills';
 import Project from '../components/Projects';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
-import ThemeSidebar from '../components/ui/themeSidebar';
+import ThemeSidebar from '../components/ui/ThemeSidebar';
 
 const Index = () => {
     return (

@@ -30,7 +30,7 @@ const Contact = () => {
             message: '',
         });
     };
-    const items = ['Mail', 'Github', 'Linkdin'];
+    // const items = ['Mail', 'Github', 'Linkdin'];
     return (
         <section id="contact" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
