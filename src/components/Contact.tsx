@@ -42,8 +42,7 @@ const Contact = () => {
                             Let's Connect!
                         </h3>
                         <div className="space-y-6">
-                            
-                             <a
+                            <a
                                 href="mailto:zn.zibanouri@gmail.com"
                                 className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"
                             >
@@ -82,7 +81,7 @@ const Contact = () => {
                                         linkedin.com/in/ziba-nouri
                                     </div>
                                 </div>
-                            </a> 
+                            </a>
                         </div>
                     </div>
 

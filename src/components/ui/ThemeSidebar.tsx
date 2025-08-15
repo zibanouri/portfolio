@@ -1,4 +1,4 @@
-import { SunMoon, Moon, Palette,Languages } from 'lucide-react';
+import { SunMoon, Moon, Palette, Languages,ChevronLeft } from 'lucide-react';
 
 
 
@@ -13,16 +13,24 @@ const ThemeSidebar = () => {
         { id: 'yellow', name: 'Yellow', color: 'bg-yellow-500' },
         { id: 'rose', name: 'Rose', color: 'bg-rose-500' },
     ];
+
+    const languages = [
+        { id: 'en', country: 'US', name: 'English' },
+        { id: 'ja', country: 'JP', name: '日本語' },
+        { id: 'fr', country: 'FR', name: 'Français' },
+        { id: 'de', country: 'DE', name: 'Deutsch' },
+
+    ];
+
     return (
-        <div className="fixed top-1/2 -translate-y-1/2 z-40 transition-all duration-300 right-0"
-            style={{ transform: 'translateY(-50%)' }}
-        >
+        <>
+       <div className="fixed top-1/2 -translate-y-1/2 z-40 transition-all duration-300 right-0">
             <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-400/30 p-4 md:p-6 w-80 max-h-[90vh] overflow-y-auto">
                 <div className="flex text-center justify-between">
                     <span className="text-sm font-medium text-slate-800 ">
                         Theme Mode
                     </span>
-                    <button className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors duration-300">
+                    <button className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 cursor-pointer">
                         <Moon className="w-4 h-4 text-slate-700" />
                     </button>
                 </div>
@@ -46,21 +54,36 @@ const ThemeSidebar = () => {
 
                     </div>
                 </div>
-                 <div>
-                        <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700 mt-3">
-                            <Languages className="w-4 h-4 mr-2" />
-                            Languages
-                        </h3>
-                        <div className="space-y-2"></div>
                 <div>
-                    <h3>
-
+                    <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700 mt-3">
+                        <Languages className="w-4 h-4 mr-2" />
+                        Languages
                     </h3>
-                </div>
+                    <div className="space-y-2">
+                            {languages.map((lang, index) => (
+                                <button
+                                    key={index}
+                                    className="w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 cursor-pointer"
+                                >
+                                    <span className="text-sm">{lang.name}</span>
+                                </button>
+                            ))}
+                        </div>
+                  
 
+
+                    
+                </div>
             </div>
 
         </div>
+           <button
+                data-sidebar-toggle
+                className="fixed top-1/2 -translate-y-1/2 z-40 p-2 md:pd-3 transition-all duration-300 shadow-lg hover:shadow-xl bg-slate-500 hover:bg-slate-400 text-white rounded-l-xl border-0 outline-none right-80 cursor-pointer"
+            >
+                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+            </button>
+        </>
     )
 
 }

@@ -11,7 +11,7 @@ const Skills = () => {
                 { name: 'javascript', level: 35 },
             ],
         },
-        
+
         {
             title: 'Tools for Better ',
             skills: [
@@ -21,18 +21,16 @@ const Skills = () => {
                 { name: ' Bootstrap', level: 75 },
             ],
         },
-        
+
         {
             title: 'Frameworks',
             skills: [
                 { name: 'React.js', level: 50 },
                 { name: 'State Management', level: 50 },
                 { name: 'Routing ', level: 75 },
-                 { name: 'Node.js ', level: 75 },
+                { name: 'Node.js ', level: 75 },
             ],
         },
-        
-        
     ];
 
     return (

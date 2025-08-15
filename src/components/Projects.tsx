@@ -1,60 +1,64 @@
 import SectionTitle from './ui/SectionTitle';
 import ProjectCard from './ProjectCard';
 
-
-
 const Projects = () => {
     const projects = [
         {
-            imageURL: "/portfolio/project-image/project1.webp",
-            title: "portfolio",
-            description: "This repository is a practice portfolio for learning React and is very important.",
-            topics: ["React", "Tailwind", "Javascript"],
-            liveURL: "#",
-            githubURL: " https://github.com/zibanouri/portfolio",
+            imageURL: '/portfolio/project-image/project1.webp',
+            title: 'portfolio',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
         },
         {
-            imageURL: "/portfolio/project-image/project2.webp",
-            title: "SolsticeTheme",
+            imageURL: '/portfolio/project-image/project2.webp',
+            title: 'SolsticeTheme',
 
-            description: "This repository is a practice portfolio for learning React and is very important.",
-            topics: ["React","Tailwind","Javascript"],
-            liveURL:"#", 
-            githubURL: " https://github.com/zibanouri/portfolio",
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
         },
         {
-            imageURL: "/portfolio/project-image/project3.webp",
-            title: "Arika",
-            description: "This repository is a practice portfolio for learning React and is very important.",
-            topics: ["React", "Tailwind", "Javascript"],
-            liveURL:"#",
-            githubURL: " https://github.com/zibanouri/portfolio",
+            imageURL: '/portfolio/project-image/project3.webp',
+            title: 'Arika',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
         },
         {
-            imageURL: "/portfolio/project-image/project4.webp",
-            title: "zibanouri",
-            description: "This repository is a practice portfolio for learning React and is very important.",
-            topics: ["React", "Tailwind", "Javascript"],
-            liveURL: "#",
-            githubURL: " https://github.com/zibanouri/portfolio",
+            imageURL: '/portfolio/project-image/project4.webp',
+            title: 'zibanouri',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
         },
         {
-            imageURL: "/portfolio/project-image/project5.webp",
-            title: "nubar",
-            description: "This repository is a practice portfolio for learning React and is very important.",
-            topics: ["React", "Tailwind", "Javascript"],
-            liveURL: "#",
-            githubURL: " https://github.com/zibanouri/portfolio",
+            imageURL: '/portfolio/project-image/project5.webp',
+            title: 'nubar',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
         },
         {
-            imageURL: "/portfolio/project-image/project6.webp",
-            title: "portfolio",
-            description: "This repository is a practice portfolio for learning React and is very important.",
-            topics: ["React", "Tailwind", "Javascript"],
-            liveURL: "#",
-            githubURL: " https://github.com/zibanouri/portfolio",
+            imageURL: '/portfolio/project-image/project6.webp',
+            title: 'portfolio',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
         },
-    ]
+    ];
     return (
         <section
             id="projects"
@@ -66,7 +70,7 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
-                            project={project}  
+                            project={project}
                             index={index}
                         />
                     ))}
