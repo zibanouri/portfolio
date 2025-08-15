@@ -79,7 +79,7 @@ const ThemeSidebar = () => {
         </div>
            <button
                 data-sidebar-toggle
-                className="fixed top-1/2 -translate-y-1/2 z-40 p-2 md:pd-3 transition-all duration-300 shadow-lg hover:shadow-xl bg-slate-500 hover:bg-slate-400 text-white rounded-l-xl border-0 outline-none right-80 cursor-pointer"
+                className="fixed top-1/2 -translate-y-1/2 z-40 p-2 md:pd-3 transition-all duration-300 shadow-lg hover:shadow-xl bg-slate-400 hover:bg-slate-00 text-white rounded-lg border-0 outline-none right-80 cursor-pointer"
             >
                 <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
             </button>
