@@ -1,8 +1,25 @@
-import { SunMoon, Moon, Palette, Languages,ChevronLeft } from 'lucide-react';
-
+import { SunMoon, Moon, Palette, Languages,ChevronLeft,ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 
 const ThemeSidebar = () => {
+     const [isOpen, setIsOpen] = useState(false);
+
+     
+    const [mode, setMode] = useState<'light' | 'dark'>(
+        () => (localStorage.getItem('theme') as 'light' | 'dark') || 'light'
+    );
+
+    useEffect(() => {
+        if (mode === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', mode);
+    }, [mode]);
+    
+
     const themes = [
         { id: 'purple', name: 'Purple', color: 'bg-purple-500' },
         { id: 'red', name: 'Red', color: 'bg-red-500' },
@@ -25,7 +42,7 @@ const ThemeSidebar = () => {
     return (
         <>
        <div className="fixed top-1/2 -translate-y-1/2 z-40 transition-all duration-300 right-0">
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-400/30 p-4 md:p-6 w-80 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-400/30 p-4 md:p-6 w-80 max-h-[90vh] overflow-y-auto" data-sidebare>
                  <div className="flex items-center justify-between mb-3">
                         <span className="text-sm font-medium flex items-center text-slate-700">
                             <SunMoon className="w-4 h-4 mr-2" />
@@ -79,7 +96,7 @@ const ThemeSidebar = () => {
                 data-sidebar-toggle
                 className="fixed top-1/2 -translate-y-1/2 z-40 p-2 md:pd-3 transition-all duration-300 shadow-lg hover:shadow-xl bg-slate-400 hover:bg-slate-600 text-white rounded-l-xl border-0 outline-none right-80 cursor-pointer"
             >
-                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
             </button>
         </>
     )
