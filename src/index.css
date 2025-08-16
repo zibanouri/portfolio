@@ -1,4 +1,6 @@
+@custom-variant dark (html.dark &);
 @import "tailwindcss";
+
 
 html {
     scroll-behavior: smooth;
