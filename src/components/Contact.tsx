@@ -32,11 +32,11 @@ const Contact = () => {
     };
     // const items = ['Mail', 'Github', 'Linkdin'];
     return (
-        <section id="contact" className="py-20 px-4">
+        <section id="contact" className="py-20 px-4 dark:bg-slate-900">
             <div className="max-w-6xl mx-auto">
                 <SectionTitle text="Get in Touch" />
 
-                <div className="grid md:grid-cols-2 gap-12">
+                <div className="grid md:grid-cols-2 gap-12 ">
                     <div>
                         <h3 className="text-2xl font-semibold mb-8">
                             Let's Connect!
@@ -44,7 +44,7 @@ const Contact = () => {
                         <div className="space-y-6">
                             <a
                                 href="mailto:zn.zibanouri@gmail.com"
-                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"
+                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80  transition-all duration-300 group"
                             >
                                 <Mail className="w-6 h-6 text-gray-400 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>

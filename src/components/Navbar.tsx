@@ -23,10 +23,10 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500
+            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 dark:bg-slate-900 dark:hover:bg-slate-800 
         ${isScrolled ? 'bg-gray-200/80 backdrop-blur-md shadow-lg' : 'bg-gray-200'}`}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="flex justify-between items-center py-4">
                     <div
                         className="text-5xl font-bold bg-gray-200
@@ -34,7 +34,7 @@ const Navbar = () => {
                     >
                         Ziba Nouri
                     </div>
-                    <div className="hidden md:flex space-x-8 text-2xl">
+                    <div className="hidden md:flex space-x-8 text-2xl  dark:bg-slate-700 dark:hover:bg-slate-700">
                         {['home', 'about', 'skills', 'projects', 'contact'].map(
                             (item) => (
                                 <button
@@ -49,7 +49,7 @@ const Navbar = () => {
                         )}
                     </div>
                     <button
-                        className="md:hidden p-2 rounded-lg hover:bg-gray-100/5 transition-colors cursor-pointer"
+                        className="md:hidden p-2 rounded-lg hover:bg-gray-100/5 transition-colors dark:bg-slate-300 dark:hover:bg-slate-300 cursor-pointer"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
@@ -60,8 +60,8 @@ const Navbar = () => {
                     </button>
                 </div>
                 {isMenuOpen && (
-                    <div className="md:hidden py-4 bg-white/90 rounded-lg mt-2 border border-gray-400/20 backdrop-blur-md">
-                        <div className="flex flex-col space-y-4 px-4">
+                    <div className="md:hidden py-4 bg-white/90 rounded-lg mt-2 border border-gray-400/20 backdrop-blur-md ">
+                        <div className="flex flex-col space-y-4 px-4 ">
                             {[
                                 'home',
                                 'about',
