@@ -33,7 +33,7 @@ const Footer = () => {
                         <div className="text-2xl font-bold text-gray-100 bg-clip-text mb-2">
                             Ziba Nouri
                         </div>
-                        <p className="text-slate-300 text-sm">
+                        <p className="text-slate-300 text-sm dark:text-slate-600 dark:hover:text-slate-200">
                             Fulfilling a 20-year-old dream with programming
                         </p>
                     </div>
@@ -66,7 +66,7 @@ const Footer = () => {
                             href="https://github.com/zibanouri"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-yellow-900 hover:text-yellow-800 hover:underline transition-all duration-300"
+                            className="text-slate-600 hover:text-slate-200 hover:underline transition-all duration-300"
                         >
                             Ziba
                         </a>

@@ -23,18 +23,18 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 dark:bg-slate-900 dark:hover:bg-slate-800 
-        ${isScrolled ? 'bg-gray-200/80 backdrop-blur-md shadow-lg' : 'bg-gray-200'}`}
+            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 dark:bg-slate-900 dark:hover:bg-slate-700 
+        ${isScrolled ? 'bg-gray-200/80 backdrop-blur-md shadow-lg dark:bg-slate-800' : 'bg-gray-200'}`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="flex justify-between items-center py-4">
                     <div
                         className="text-5xl font-bold bg-gray-200
-                    text-gray-800 bg-clip-text text-bold  hover:text-gray-900"
+                    text-gray-800 bg-clip-text text-bold  hover:text-gray-900 dark:text-gray-200"
                     >
                         Ziba Nouri
                     </div>
-                    <div className="hidden md:flex space-x-8 text-2xl  dark:bg-slate-700 dark:hover:bg-slate-700">
+                    <div className="hidden md:flex space-x-8 text-2xl  dark:text-slate-200 dark:hover:text-slate-300 ">
                         {['home', 'about', 'skills', 'projects', 'contact'].map(
                             (item) => (
                                 <button

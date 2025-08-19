@@ -32,24 +32,24 @@ const Contact = () => {
     };
     // const items = ['Mail', 'Github', 'Linkdin'];
     return (
-        <section id="contact" className="py-20 px-4 dark:bg-slate-900">
+        <section id="contact" className="py-20 px-4 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
             <div className="max-w-6xl mx-auto">
                 <SectionTitle text="Get in Touch" />
 
                 <div className="grid md:grid-cols-2 gap-12 ">
                     <div>
-                        <h3 className="text-2xl font-semibold mb-8">
+                        <h3 className="text-2xl font-semibold mb-8 dark:text-slate-500 dark:hover:text-slate-200">
                             Let's Connect!
                         </h3>
                         <div className="space-y-6">
                             <a
                                 href="mailto:zn.zibanouri@gmail.com"
-                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80  transition-all duration-300 group"
+                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 dark:bg-slate-800 dark:hover:bg-slate-700 transition-all duration-300 group"
                             >
-                                <Mail className="w-6 h-6 text-gray-400 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
+                                <Mail className="w-6 h-6 text-gray-400  dark:bg-slate-800 dark:hover:bg-slate-700 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>
-                                    <div className="font-medium">Email</div>
-                                    <div className="text-slate-600 text-sm">
+                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">Email</div>
+                                    <div className="text-slate-600 text-sm dark:text-slate-500 dark:hover:text-slate-100">
                                         zn.zibanouri@gmail.com
                                     </div>
                                 </div>
@@ -58,12 +58,12 @@ const Contact = () => {
                                 href="https://github.com/zibanouri"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"
+                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80  dark:bg-slate-800 dark:hover:bg-slate-700 transition-all duration-300 group"
                             >
-                                <Github className="w-6 h-6 text-gray-400 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
+                                <Github className="w-6 h-6 text-gray-400 mr-4  dark:text-slate-500 dark:hover:text-slate-100 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>
-                                    <div className="font-medium">GitHub</div>
-                                    <div className="text-slate-500 text-sm">
+                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">GitHub</div>
+                                    <div className="text-slate-500 text-sm  dark:text-slate-500 dark:hover:text-slate-100">
                                         github.com/zibanouri
                                     </div>
                                 </div>
@@ -72,12 +72,12 @@ const Contact = () => {
                                 href="https://www.linkedin.com/in/ziba-nouri/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 transition-all duration-300 group"
+                                className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80  dark:text-slate-500 dark:hover:text-slate-100  dark:bg-slate-800 dark:hover:bg-slate-700  transition-all duration-300 group"
                             >
-                                <Linkedin className="w-6 h-6 text-gray-400 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
+                                <Linkedin className="w-6 h-6 text-gray-400 mr-4  dark:text-slate-500 dark:hover:text-slate-100 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>
-                                    <div className="font-medium">LinkedIn</div>
-                                    <div className="text-slate-500 text-sm">
+                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">LinkedIn</div>
+                                    <div className="text-slate-500 text-sm  dark:text-slate-500 dark:hover:text-slate-100">
                                         linkedin.com/in/ziba-nouri
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ const Contact = () => {
                             <div className="mt-3">
                                 <label
                                     htmlFor="name"
-                                    className="block text-sm font-medium mb-1"
+                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
                                 >
                                     Name
                                 </label>
@@ -102,14 +102,14 @@ const Contact = () => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
+                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-200 dark:text-slate-700 dark:hover:text-slate-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium mb-1"
+                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
                                 >
                                     Email
                                 </label>
@@ -121,14 +121,14 @@ const Contact = () => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="your email@example.com"
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
+                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-200 dark:text-slate-700 dark:hover:text-slate-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="message"
-                                    className="block text-sm font-medium mb-1"
+                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
                                 >
                                     Message
                                 </label>
@@ -140,7 +140,7 @@ const Contact = () => {
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
+                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-200 dark:text-slate-700 dark:hover:text-slate-200 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
                                     style={{ resize: 'none' }}
                                 />
                             </div>
@@ -148,7 +148,7 @@ const Contact = () => {
                             <div className="m-4">
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-blue-400 to-blue-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300 text-gray-800 py-3 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer"
+                                    className="w-full bg-gradient-to-r from-blue-400 to-blue-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300 text-gray-800 py-3 dark:text-slate-900 dark:hover:text-slate-200 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer"
                                 >
                                     Send Message
                                 </button>
@@ -172,7 +172,7 @@ const Contact = () => {
                                     </svg>
                                     <span className="sr-only">Check icon</span>
                                 </div>
-                                <div className="ms-3 text-sm font-normal">
+                                <div className="ms-3 text-sm font-normal dark:text-slate-100">
                                     Thank You! Your message has been sent
                                     successfully!
                                 </div>
