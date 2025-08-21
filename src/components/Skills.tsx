@@ -34,8 +34,11 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="py-20 px-4 bg-gray-50 text-gray-800  dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
-            <div className="max-w-6xl mx-auto bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
+        <section
+            id="skills"
+            className="py-20 px-4 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"
+        >
+            <div className="max-w-6xl mx-auto bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
                 <SectionTitle text="Skills Me" />
 
                 <div className="grid md:grid-cols-3 gap-8 bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
@@ -54,15 +57,15 @@ const Skills = () => {
                             <div className="space-y-4">
                                 {category.skills.map((skill) => (
                                     <div key={skill.name} className="space-y-2">
-                                        <div className="flex justify-between items-center  dark:text-slate-400 dark:hover:text-slate-100">
-                                            <span className="text-gray-700 text-sm dark:text-slate-400 dark:hover:text-slate-100">
+                                        <div className="flex justify-between items-center  dark:text-slate-400 dark:hover:text-slate-300">
+                                            <span className="text-gray-700 text-sm dark:text-slate-400 dark:hover:text-slate-300 ">
                                                 {skill.name}
                                             </span>
-                                            <span className="text-gray-600 text-sm font-medium dark:text-slate-400 dark:hover:text-slate-100 ">
+                                            <span className="text-gray-600 text-sm font-medium dark:text-slate-400 dark:hover:text-slate-200 ">
                                                 {skill.level}%
                                             </span>
                                         </div>
-                                        <div className="w-full bg-gray-200 rounded-full h-2  dark:text-slate-400 dark:hover:text-slate-100">
+                                        <div className="w-full bg-gray-200 rounded-full h-2  dark:text-slate-400 dark:hover:text-slate-200  dark:bg-slate-400 dark:hover:bg-slate-200">
                                             <div
                                                 className="bg-gradient-to-r from-slate-800 to-slate-700 h-2 rounded-full transition-all duration-500 ease-out  dark:text-slate-400 dark:hover:text-slate-100"
                                                 style={{

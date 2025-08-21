@@ -32,7 +32,10 @@ const Contact = () => {
     };
     // const items = ['Mail', 'Github', 'Linkdin'];
     return (
-        <section id="contact" className="py-20 px-4 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
+        <section
+            id="contact"
+            className="py-20 px-4 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 "
+        >
             <div className="max-w-6xl mx-auto">
                 <SectionTitle text="Get in Touch" />
 
@@ -48,7 +51,9 @@ const Contact = () => {
                             >
                                 <Mail className="w-6 h-6 text-gray-400  dark:bg-slate-800 dark:hover:bg-slate-700 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>
-                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">Email</div>
+                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">
+                                        Email
+                                    </div>
                                     <div className="text-slate-600 text-sm dark:text-slate-500 dark:hover:text-slate-100">
                                         zn.zibanouri@gmail.com
                                     </div>
@@ -62,7 +67,9 @@ const Contact = () => {
                             >
                                 <Github className="w-6 h-6 text-gray-400 mr-4  dark:text-slate-500 dark:hover:text-slate-100 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>
-                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">GitHub</div>
+                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">
+                                        GitHub
+                                    </div>
                                     <div className="text-slate-500 text-sm  dark:text-slate-500 dark:hover:text-slate-100">
                                         github.com/zibanouri
                                     </div>
@@ -76,7 +83,9 @@ const Contact = () => {
                             >
                                 <Linkedin className="w-6 h-6 text-gray-400 mr-4  dark:text-slate-500 dark:hover:text-slate-100 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                 <div>
-                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">LinkedIn</div>
+                                    <div className="font-medium  dark:text-slate-500 dark:hover:text-slate-100">
+                                        LinkedIn
+                                    </div>
                                     <div className="text-slate-500 text-sm  dark:text-slate-500 dark:hover:text-slate-100">
                                         linkedin.com/in/ziba-nouri
                                     </div>

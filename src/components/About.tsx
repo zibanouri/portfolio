@@ -22,7 +22,9 @@ const About = () => {
                     <div className="bg-slate-400/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/60 dark:hover:border-slate-300 transition-all duration-300">
                         <div className="flex items-center mb-6 space-x-3">
                             <User className="w-6 h-7 text-slate-800 font-black  dark:text-slate-400 dark:hover:text-slate-200" />
-                            <h3 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-200">My Story</h3>
+                            <h3 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-200">
+                                My Story
+                            </h3>
                         </div>
                         <p className="text-slate-900 leading-relaxed mb-8  dark:text-slate-400 dark:hover:text-slate-200">
                             My heart is happy because I am here and I am moving
