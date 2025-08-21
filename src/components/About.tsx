@@ -47,7 +47,7 @@ const About = () => {
                         <div className="flex items-center mb-6 space-x-3">
                             <Code className="w-6 h-7 text-slate-700  font-black dark:text-slate-400 dark:hover:text-slate-200" />
                             <h2 className="font-semibold text-2xl hover:text-slate-200 dark:text-slate-400 dark:hover:text-slate-200 ">
-                              What I Do
+                                What I Do
                             </h2>
                         </div>
                         <div className="space-y-4 dark:hover:text-slate-200 dark:text-slate-100 ">
