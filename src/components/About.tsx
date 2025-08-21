@@ -19,7 +19,7 @@ const About = () => {
                 <SectionTitle text="About Me" />
 
                 <div className="grid md:grid-cols-2 gap-12 items-center  dark:text-slate-400 dark:hover:text-slate-200">
-                    <div className="bg-slate-400/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/60 dark:hover:border-slate-300 transition-all duration-300">
+                    <div className="bg-slate-300/20 backdrop-blur-sm rounded-2xl p-8 border border-slate-500/20 hover:border-slate-700/60 dark:hover:border-slate-300 transition-all duration-300">
                         <div className="flex items-center mb-6 space-x-3">
                             <User className="w-6 h-7 text-slate-800 font-black  dark:text-slate-400 dark:hover:text-slate-200" />
                             <h3 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-200">
@@ -43,25 +43,25 @@ const About = () => {
                             difficulties are an inseparable part of life.
                         </p>
                     </div>
-                    <div className="bg-slate-400/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 dark:hover:border-slate-300">
+                    <div className="bg-slate-300/20 backdrop-blur-sm rounded-2xl p-8 border border-slate-300/20 hover:border-slate-700/60 transition-all duration-300 dark:hover:border-slate-300">
                         <div className="flex items-center mb-6 space-x-3">
-                            <Code className="w-6 h-7 text-slate-800 font-black dark:text-slate-400 dark:hover:text-slate-200" />
-                            <h2 className="font-semibold text-2xl  dark:text-slate-400 dark:hover:text-slate-200">
-                                What I Do
+                            <Code className="w-6 h-7 text-slate-700  font-black dark:text-slate-400 dark:hover:text-slate-200" />
+                            <h2 className="font-semibold text-2xl hover:text-slate-200 dark:text-slate-400 dark:hover:text-slate-200 ">
+                              What I Do
                             </h2>
                         </div>
-                        <div className="space-y-4  dark:text-slate-400 dark:hover:text-slate-200">
+                        <div className="space-y-4 dark:hover:text-slate-200 dark:text-slate-100 ">
                             {iDo.map((item) => (
-                                <div className="flex items-center">
-                                    <div className="w-3 h-3 rounded-full mr-3 bg-gray-700  dark:text-slate-400 dark:hover:text-slate-200 dark:bg-slate-400 dark:hover:bg-slate-200"></div>
+                                <div className="flex items-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors duration-200">
+                                    <div className="w-3 h-3 rounded-full mr-3 bg-gray-700 dark:bg-slate-500 dark:hover:bg-slate-200 transition-colors duration-200"></div>
                                     {item}
-                                    <span className="text-slate-800 "></span>
+                                    <span className="text-slate-800 hover:text-slate-500 dark:text-slate-400 dark:hover:text-slate-200"></span>
                                 </div>
                             ))}
                         </div>
                         <div className="mt-8">
                             <a href="/portfolio/Resume.pdf" download>
-                                <div className="inline-flex items-center text-blue-400 hover:text-blue-700  dark:text-slate-400 dark:hover:text-slate-200">
+                                <div className="inline-flex items-center text-slate-400 hover:text-slate-700  dark:text-slate-400 dark:hover:text-slate-200">
                                     <Download className="h-5 w-5 mr-3" />{' '}
                                     Downloud Resume
                                 </div>
