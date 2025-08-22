@@ -3,17 +3,21 @@ import SectionTitle from './ui/SectionTitle';
 
 const About = () => {
     const iDo = [
-        'Front-end developer',
-        'React',
-        'Responsive UI/UX Design',
-        'Modern JavaScript FrameWorks',
-        'Typescript',
-        'Tailwindcss',
+        'Front-End Development',
+        'React & React Ecosystem',
+        'Responsive & Accessible UI/UX',
+        'Modern JavaScript (ES6+)',
+        'TypeScript',
+        'Tailwind CSS & Utility-First Design',
+        'Building User-Centered Web Apps',
+        'Code as a Tool for Independence',
+        'Cross-Browser & Device Compatibility',
+        'Learning in Public & Tech Growth'
     ];
     return (
         <section
             id="about"
-            className="py-20 px-4 relative min-h-screen bg-gradient-to-b from-yellow-50 via-orange-50 to-amber-50 dark:bg-gradient-to-br dark:from-slate-800 dark:via-slate-900 dark:to-slate-800  "
+            className="py-20 px-4 relative min-h-screen bg-gradient-to-br from-slate-100 via-slate-50  dark:bg-gradient-to-br dark:from-slate-800 dark:via-slate-900 dark:to-slate-800  "
         >
             <div className="max-w-6xl mx-auto  dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 ">
                 <SectionTitle text="About Me" />
@@ -27,20 +31,20 @@ const About = () => {
                             </h3>
                         </div>
                         <p className="text-slate-900 leading-relaxed mb-8  dark:text-slate-400 dark:hover:text-slate-200">
-                            My heart is happy because I am here and I am moving
-                            forward to achieve my goals, despite all the
-                            difficulties.. I love programming, although my main
-                            field of study in university was something
-                            completely different. But the more I learn this
-                            skill, the more I am fascinated by it. I think it is
-                            unique with all the difficulties and it makes me
-                            feel good. To achieve my dreams and goals, every
-                            difficulty is always a challenge for me because I
-                            want to be an independent mother and stand on my own
-                            two feet with all my heart. The world and the
-                            difficulties of life cannot reduce my efforts to
-                            achieve my goals. This is Iran, where challenges and
-                            difficulties are an inseparable part of life.
+                            My heart is happy, I am here, and I am moving forward.
+                            Despite all the hardships, I am rebuilding my life: one line of code, one word of German, one day at a time.
+
+                            I wasn’t always a programmer. My degree was in another field. But the moment I discovered coding, I fell in love with it. With every lesson, every bug, and every improvement — I feel more alive. Programming is hard, yes. But it’s beautiful. It gives me purpose. It empowers me.
+
+                            I am a single mother with two teenage children. I have been through betrayal, heartbreak, and a storm that could have broken me. But I chose to fight — not with anger, but with action.
+
+                            I am learning JavaScript and React. My German is B1 and improving. Every challenge is my fuel. I don’t just want to survive — I want to grow, stand on my own two feet, and build a future beyond borders.
+
+                            This is Iran, where life tests you every day. But no challenge can dampen my resolve.
+
+                            This repository is more than a collection of code.
+                            It is my courage. It is my hope. My promise to my children:
+                            I will not give up, I will emigrate, I will save us.
                         </p>
                     </div>
                     <div className="bg-slate-300/20 backdrop-blur-sm rounded-2xl p-8 border border-slate-300/20 hover:border-slate-700/60 transition-all duration-300 dark:hover:border-slate-300">

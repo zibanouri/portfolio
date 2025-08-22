@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     <a
                         href={project.liveURL}
                         target="_blank"
-                        className="flex-1 text-white bg-gradient-to-r from-slate-300 to-slate-400 hover:text-gray-100 hover:shadow-lg  dark:text-slate-600 dark:hover:text-slate-800 text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform transform-gpu hover:scale-[1.01]"
+                        className="flex-1 text-slate-700 bg-gradient-to-r from-slate-300 to-slate-400 hover:text-gray-900 hover:shadow-lg  dark:text-slate-600 dark:hover:text-slate-900 text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform transform-gpu hover:scale-[1.01]"
                     >
                         Live Demo
                     </a>

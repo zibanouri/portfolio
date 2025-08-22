@@ -62,7 +62,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="py-20 px-4 relative min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 text-4xl text-left bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 "
+            className="py-20 px-4 relative min-h-screen bg-gradient-to-br from-slate-100 via-slate-50  text-4xl text-left bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 "
         >
             <div className="max-w-6xl mx-auto">
                 <SectionTitle text="Projects" />
