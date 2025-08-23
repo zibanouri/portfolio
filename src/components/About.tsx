@@ -12,7 +12,7 @@ const About = () => {
         'Building User-Centered Web Apps',
         'Code as a Tool for Independence',
         'Cross-Browser & Device Compatibility',
-        'Learning in Public & Tech Growth'
+        'Learning in Public & Tech Growth',
     ];
     return (
         <section
@@ -31,20 +31,28 @@ const About = () => {
                             </h3>
                         </div>
                         <p className="text-slate-900 leading-relaxed mb-8  dark:text-slate-400 dark:hover:text-slate-200">
-                            My heart is happy, I am here, and I am moving forward.
-                            Despite all the hardships, I am rebuilding my life: one line of code, one word of German, one day at a time.
-
-                            I wasn’t always a programmer. My degree was in another field. But the moment I discovered coding, I fell in love with it. With every lesson, every bug, and every improvement — I feel more alive. Programming is hard, yes. But it’s beautiful. It gives me purpose. It empowers me.
-
-                            I am a single mother with two teenage children. I have been through betrayal, heartbreak, and a storm that could have broken me. But I chose to fight — not with anger, but with action.
-
-                            I am learning JavaScript and React. My German is B1 and improving. Every challenge is my fuel. I don’t just want to survive — I want to grow, stand on my own two feet, and build a future beyond borders.
-
-                            This is Iran, where life tests you every day. But no challenge can dampen my resolve.
-
-                            This repository is more than a collection of code.
-                            It is my courage. It is my hope. My promise to my children:
-                            I will not give up, I will emigrate, I will save us.
+                            My heart is happy, I am here, and I am moving
+                            forward. Despite all the hardships, I am rebuilding
+                            my life: one line of code, one word of German, one
+                            day at a time. I wasn’t always a programmer. My
+                            degree was in another field. But the moment I
+                            discovered coding, I fell in love with it. With
+                            every lesson, every bug, and every improvement — I
+                            feel more alive. Programming is hard, yes. But it’s
+                            beautiful. It gives me purpose. It empowers me. I am
+                            a single mother with two teenage children. I have
+                            been through betrayal, heartbreak, and a storm that
+                            could have broken me. But I chose to fight — not
+                            with anger, but with action. I am learning
+                            JavaScript and React. My German is B1 and improving.
+                            Every challenge is my fuel. I don’t just want to
+                            survive — I want to grow, stand on my own two feet,
+                            and build a future beyond borders. This is Iran,
+                            where life tests you every day. But no challenge can
+                            dampen my resolve. This repository is more than a
+                            collection of code. It is my courage. It is my hope.
+                            My promise to my children: I will not give up, I
+                            will emigrate, I will save us.
                         </p>
                     </div>
                     <div className="bg-slate-300/20 backdrop-blur-sm rounded-2xl p-8 border border-slate-300/20 hover:border-slate-700/60 transition-all duration-300 dark:hover:border-slate-300">
