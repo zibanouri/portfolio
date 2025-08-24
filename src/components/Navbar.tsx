@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-    toggleTheme: () => void;
-    darkMode: boolean;
+    // toggleTheme: () => void;
+    // darkMode: boolean;
     theme: string;
 }
 
@@ -28,15 +28,15 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             case 'red':
                 return 'from-red-500 to-red-400';
             case 'green':
-                return 'from-emerald-500 to-yellow-600';
+                return 'from-emerald-500 to-emerald-400';
             case 'yellow':
                 return 'from-yellow-500 to-yellow-400';
             case 'pink':
                 return 'from-pink-500 to-pink-400';
             case 'purple':
-                return 'from-purple-500 to-cyan-400';
+                return 'from-purple-500 to-purple-400';
             default:
-                return 'from-slate-500 to-purple-400';
+                return 'from-slate-500 to-slate-400';
         }
     };
     const bgDarkFromTo = () => {
@@ -48,15 +48,15 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             case 'red':
                 return 'dark:from-red-500 dark:to-red-400';
             case 'green':
-                return 'dark:from-emerald-500 dark:to-yellow-600';
+                return 'dark:from-emerald-500 dark:to-emerald-400';
             case 'yellow':
                 return 'dark:from-yellow-500 dark:to-yellow-400';
             case 'pink':
                 return 'dark:from-pink-500 dark:to-pink-400';
             case 'purple':
-                return 'dark:from-purple-500 dark:to-cyan-400';
+                return 'dark:from-purple-500 dark:to-purple-400';
             default:
-                return 'dark:from-slate-500 dark:to-purple-400';
+                return 'dark:from-slate-500 dark:to-slate-400';
         }
     };
     const navHover = () => {
@@ -111,8 +111,12 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 dark:bg-slate-900 dark:hover:bg-slate-700 
-        ${isScrolled ? 'bg-gray-200/80 backdrop-blur-md shadow-lg dark:bg-slate-800' : 'bg-gray-200'}`}
+            className={`fixed top-0 left-0 right-0 z-30 transition-all duration-500
+                ${isScrolled
+                    ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-slate-900/80'
+                    : 'bg-transparent'
+                }`}
+            aria-label="Main Navigation"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="flex justify-between items-center py-4">
@@ -128,14 +132,15 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                                 <button
                                     key={item}
                                     onClick={() => scrollSection(item)}
-                                    className={`capitalize hover:text-gray-800 dark:text-slate-200 
+                                    className={`capitalize dark:text-slate-200 
                                       ${navHover()}
-                                    transition-all duration-300 cursor-pointer font-sans relative group text-2xl`}
+                                    transition-all duration-300 cursor-pointer font-sans relative group`}
+                                    aria-label={`Go to ${item} section`}
                                 >
                                     {item}
                                     <span className={`absolute -bottom-1 left-0 w-0 h-0.5
                                      ${navLink()}
-                                     group-hover:bg-gray-300 group-hover:w-full transition-all duration-300`}></span>
+                                      group-hover:w-full transition-all duration-300`}></span>
                                 </button>
                             )
                         )}
@@ -143,6 +148,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                     <button
                         className="md:hidden p-2 rounded-lg hover:bg-gray-100/5 transition-colors dark:bg-slate-300 dark:hover:bg-slate-300 cursor-pointer"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-expanded={isMenuOpen}
+                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                     >
                         {isMenuOpen ? (
                             <X className="w-6 h-6" />
@@ -164,9 +171,10 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                                 <button
                                     key={item}
                                     onClick={() => scrollSection(item)}
-                                    className={`capitalize text-left py-2 hover:text-gray-800
+                                    className={`capitalize text-left py-2
                                      ${navHover()}
                                     transition-colors duration-300 font-medium cursor-pointer`}
+                                    aria-label={`Go to ${item} section`}
                                 >
                                     {item}
                                     <span
