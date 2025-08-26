@@ -1,7 +1,11 @@
 import { Code } from 'lucide-react';
 import SectionTitle from './ui/SectionTitle';
 
-const Skills = () => {
+interface HeroProps {
+    theme: string;
+}
+
+const Skills: React.FC<HeroProps> = ({ theme }) => {
     const SkillCategory = [
         {
             title: 'Fundamentals',
@@ -36,7 +40,7 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="py-20 px-4 bg-gradient-to-br from-slate-100 via-slate-50  dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"
+            className={`py-20 px-4 bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-900 dark:via-${theme}-800 dark:to-${theme}-900`}
         >
             <div className="max-w-6xl mx-auto">
                 <SectionTitle text="My Skills" />
@@ -45,7 +49,7 @@ const Skills = () => {
                     {SkillCategory.map((category) => (
                         <div
                             key={category.title}
-                            className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-300 hover:border-gray-500 transition-all duration-300 shadow-sm hover:shadow-md  dark:bg-slate-900 dark:hover:bg-slate-800"
+                            className={` bg-${theme}-600 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-300 hover:border-${theme}-500 transition-all duration-300 shadow-sm hover:shadow-md  dark:bg-${theme}-900 dark:hover:bg-${theme}-800`}
                         >
                             <div className="flex items-center mb-6 ">
                                 <Code className="w-6 h-6 text-gray-600 mr-3  dark:text-slate-400 dark:hover:text-slate-100" />
@@ -65,9 +69,11 @@ const Skills = () => {
                                                 {skill.level}%
                                             </span>
                                         </div>
-                                        <div className="w-full bg-gray-200 rounded-full h-2  dark:text-slate-400 dark:hover:text-slate-200  dark:bg-slate-400 dark:hover:bg-slate-200">
+                                        <div
+                                            className={`w-full bg-${theme}-200 rounded-full h-2  dark:text-${theme}-400 dark:hover:text-${theme}-200  dark:bg-${theme}-400 dark:hover:bg-${theme}-200`}
+                                        >
                                             <div
-                                                className="bg-gradient-to-r from-slate-800 to-slate-700 h-2 rounded-full transition-all duration-500 ease-out  dark:text-slate-400 dark:hover:text-slate-100"
+                                                className={`bg-gradient-to-r from-slate-700 to-slate-600 h-2 rounded-full transition-all duration-500 ease-out  dark:text-slate-400 dark:hover:text-slate-100`}
                                                 style={{
                                                     width: `${skill.level}%`,
                                                 }}

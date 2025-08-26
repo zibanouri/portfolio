@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-    // toggleTheme: () => void;
-    // darkMode: boolean;
     theme: string;
 }
 
@@ -112,9 +110,10 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-30 transition-all duration-500
-                ${isScrolled
-                    ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-slate-900/80'
-                    : 'bg-transparent'
+                ${
+                    isScrolled
+                        ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-slate-900/80'
+                        : 'bg-transparent'
                 }`}
             aria-label="Main Navigation"
         >
@@ -138,9 +137,11 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                                     aria-label={`Go to ${item} section`}
                                 >
                                     {item}
-                                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5
+                                    <span
+                                        className={`absolute -bottom-1 left-0 w-0 h-0.5
                                      ${navLink()}
-                                      group-hover:w-full transition-all duration-300`}></span>
+                                      group-hover:w-full transition-all duration-300`}
+                                    ></span>
                                 </button>
                             )
                         )}
