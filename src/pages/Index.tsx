@@ -38,7 +38,7 @@ const Index = () => {
             <About theme={theme} />
             <Skills theme={theme} />
             <Projects />
-            <Contact />
+            <Contact theme={theme}/>
             <Footer />
             <>
                 {() => {
@@ -52,16 +52,35 @@ via-red-50 via-rose-50 via-pink-50 via-yellow-50 via-green-50 via-purple-50 via-
  dark:to-red-800 dark:to-rose-800 dark:to-pink-800 dark:to-yellow-800 dark:to-green-800 dark:to-purple-800 dark:to-gray-800 dark:to-blue-800  
 border-red-300 border-rose-300 border-pink-300 border-yellow-300 border-green-300 border-blue-300 border-purple-300 border-gray-300
  hover:border-red-500 hover:border-rose-500 hover:border-pink-500 hover:border-yellow-500 hover:border-blue-500 hover:border-green-500 hover:border-purple-500  hover:border-gray-500
- dark:bg-red-900 dark:bg-rose-900 dark:bg-blue-900 dark:bg-pink-900 dark:bg-yellow-900 dark:bg-green-900 dark:bg-purple-900 dark:bg-blue-90osedark:bg-gray-900    
- dark:hover:bg-red-800 dark:hover:bg-rose-800 dark:hover:bg-pink-800 dark:hover:bg-yellow-800 dark:hover:bg-green-800 dark:hover:bg-purple-800 dark:hover:bg-blue-800 dark:hover:bg-gray-800
- bg-red-600 bg-rose-600 bg-pink-600 bg-yellow-600 bg-green-600 bg-purple-600 bg-blue-600 bg-gray-600
- bg-red-200 bg-rose-200 bg-pink-200 bg-yellow-200 bg-green-200 bg-purple-200 bg-blue-200 bg-gray-200  
- dark:bg-red-800 dark:bg-rose-800 dark:bg-pink-800 dark:bg-yellow-800 dark:bg-green-800 dark:bg-purple-800 dark:bg-blue-800  dark:bg-gray-800
+text-red-600 text-rose-600 text-pink-600 text-yellow-600 text-green-600 text-purple-600 text-blue-600 text-gray-600
+dark:text-red-400 dark:text-rose-400 dark:text-pink-400 dark:text-yellow-400 dark:text-green-400 dark:text-purple-400 dark:text-blue-400  dark:text-gray-400 
+dark:hover:text-red-200 dark:hover:text-rose-200 dark:hover:text-pink-200 dark:hover:text-yellow-200 dark:hover:text-green-200 dark:hover:text-purple-200 dark:hover:text-blue-200 dark:hover:text-gray-200
+from-red-700 from-rose-700 from-pink-700 from-yellow-700 from-green-700 from-purple-700 from-blue-700 from-gray-700
+to-red-600 to-rose-600 to-pink-600 to-yellow-600 to-green-600 to-red-600 to-purple-600 to-blue-600 from-gray-700
+text-red-700 text-rose-700 text-pink-700 text-yellow-700 text-green-700 text-purple-700 text-blue-700 text-gray-700 
+bg-red-100 bg-rose-100 bg-pink-100 bg-yellow-100 bg-green-100 bg-purple-100 bg-blue-100 bg-gray-100 
+dark:text-red-700 dark:text-rose-700 dark:text-pink-700 dark:text-yellow-700 dark:text-green-700 dark:text-purple-700 dark:text-blue-700  dark:text-gray-700 
+dark:hover:text-red-200 dark:hover:text-rose-200 dark:hover:text-pink-200 dark:hover:text-yellow-200 dark:hover:text-green-200 dark:hover:text-purple-200 dark:hover:text-blue-200 dark:hover:text-gray-200 
+dark:bg-red-800 dark:bg-rose-800 dark:bg-pink-800 dark:bg-yellow-800 dark:bg-green-800 dark:bg-purple-800 dark:bg-blue-800 dark:bg-gray-800
+dark:hover:bg-red-700 dark:hover:bg-rose-700 dark:hover:bg-pink-700 dark:hover:bg-yellow-700 dark:hover:bg-green-700 dark:hover:bg-purple-700 dark:hover:bg-blue-700 dark:hover:bg-gray-700
+dark:border-red-700 dark:border-rose-700 dark:border-pink-700 dark:border-yellow-700 dark:border-green-700 dark:border-purple-700 dark:border-blue-700 dark:border-gray-700 
+dark:hover:border-red-200 dark:hover:border-rose-200 dark:hover:border-pink-200 dark:hover:border-yellow-200 dark:hover:border-green-200 dark:hover:border-purple-200 dark:hover:border-blue-200 dark:hover:border-gray-200 
+text-red-500 text-rose-500 text-pink-500 text-yellow-500 text-purple-500 text-blue-500 text-green-500 text-gray-500 
+dark:text-red-500 dark:text-rose-500 dark:text-pink-500 dark:text-yellow-500 dark:text-green-500 dark:text-purple-500 dark:text-blue-500  dark:text-gray-500 
+dark:hover:text-red-200 dark:hover:text-rose-200 dark:hover:text-pink-200 dark:hover:text-yellow-200 dark:hover:text-green-200 dark:hover:text-purple-200 dark:hover:text-blue-200 dark:hover:text-gray-200 
+ border-red-400/20 border-rose-400/20 border-pink-400/20  border-yellow-400/20 border-green-400/20 border-purple-400/20 border-blue-400/20  border-gray-400/20
+hover:border-red-400/80 hover:border-rose-400/80 hover:border-pink-400/80 hover:border-yellow-400/80 hover:border-green-400/80 hover:border-purple-400/80 hover:border-blue-400/80 hover:border-gray-400/80 
+bg-red-700 bg-rose-700 bg-pink-700 bg-yellow-700 bg-green-700 bg-purple-700 bg-blue-700 bg-gray-700
+dark:bg-red-600 dark:bg-rose-600 dark:bg-pink-600 dark:bg-yellow-600 dark:bg-green-600  dark:bg-purple-600  dark:bg-blue-600  dark:bg-gray-600  
+dark:hover:bg-red-200 dark:hover:bg-rose-200 dark:hover:bg-pink-200 dark:hover:bg-yellow-200 dark:hover:bg-green-200 dark:hover:bg-purple-200 dark:hover:bg-blue-200 dark:hover:bg-gray-200
+ border-red-500/60 border-rose-500/60 border-pink-500/60 border-yellow-500/60 border-green-500/60 border-purple-500/60 border-blue-500/60 border-gray-500/60  
+ hover:border-red-700/60 hover:border-rose-700/60 hover:border-pink-700/60 hover:border-yellow-700/60 hover:border-green-700/60 hover:border-purple-700/60 hover:border-blue-700/60 hover:border-gray-700/60  
+ dark:hover:border-red-300 dark:hover:border-rose-300 dark:hover:border-pink-300 dark:hover:border-yellow-300 dark:hover:border-green-300 dark:hover:border-purple-300 dark:hover:border-blue-300 dark:hover:border-gray-300
+  
+`;
 
-
-
-                      `;
                 }}
+
             </>
         </div>
     );

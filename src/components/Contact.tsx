@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import SectionTitle from './ui/SectionTitle';
 
+
+interface ContactProps {
+    theme: string;
+}
+const Contact: React.FC<ContactProps> = ({ theme }) => {
 const socials = [
     {
         URL: 'mailto:zn.zibanouri@gmail.com',
@@ -23,7 +28,6 @@ const socials = [
     },
 ];
 
-const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -55,14 +59,14 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="py-20 px-4  bg-gradient-to-br from-slate-100 via-slate-50  dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 "
+            className={`py-20 px-4  bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-900 dark:via-${theme}-800 dark:to-${theme}-900 `}
         >
             <div className="max-w-6xl mx-auto">
                 <SectionTitle text="Get in Touch" />
 
                 <div className="grid md:grid-cols-2 gap-12">
                     <div>
-                        <h3 className="text-2xl font-semibold mb-8 dark:text-slate-500 dark:hover:text-slate-200">
+                        <h3 className={`text-2xl font-semibold mb-8 dark:text-${theme}-500 dark:hover:text-${theme}-200`}>
                             Let's Connect!
                         </h3>
                         <div className="space-y-6">
@@ -74,14 +78,14 @@ const Contact = () => {
                                         href={social.URL}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center p-4 bg-white/10 rounded-lg border border-gray-400/20 hover:border-gray-400/80 dark:bg-slate-800 dark:hover:bg-slate-700 transition-all duration-300 group"
+                                        className={`flex items-center p-4 bg-white/10 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 dark:bg-${theme}-800 dark:hover:bg-${theme}-700 transition-all duration-300 group`}
                                     >
-                                        <Icon className="w-6 h-6 text-gray-400 dark:text-slate-500 dark:hover:text-slate-100 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
+                                        <Icon className={`w-6 h-6 text-${theme}-500 dark:text-${theme}-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]`} />
                                         <div>
-                                            <div className="font-medium dark:text-slate-500 dark:hover:text-slate-100">
+                                            <div className={`font-medium dark:text-${theme}-500 dark:hover:text-${theme}-200`}>
                                                 {social.title}
                                             </div>
-                                            <div className="text-slate-600 text-sm dark:text-slate-500 dark:hover:text-slate-100">
+                                            <div className={`text-${theme}-600 text-sm dark:text-${theme}-700 dark:hover:text-slate-100`}>
                                                 {social.displayURL}
                                             </div>
                                         </div>
@@ -96,7 +100,7 @@ const Contact = () => {
                             <div className="mt-3">
                                 <label
                                     htmlFor="name"
-                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
+                                    className={`block text-sm font-medium mb-1 dark:text-${theme}-700`}
                                 >
                                     Name
                                 </label>
@@ -108,14 +112,14 @@ const Contact = () => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-200 dark:text-slate-700 dark:hover:text-slate-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-${theme}-800 dark:hover:bg-${theme}-700 dark:border-${theme}-300 dark:hover:border-${theme}-500 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400`}
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
+                                    className={`block text-sm font-medium mb-1 dark:text-${theme}-700`}
                                 >
                                     Email
                                 </label>
@@ -127,14 +131,14 @@ const Contact = () => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="your email@example.com"
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-200 dark:text-slate-700 dark:hover:text-slate-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-${theme}-800 dark:hover:bg-${theme}-700 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-300 text-${theme}-500 placeholder:text-slate-400`}
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="message"
-                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
+                                    className={`block text-sm font-medium mb-1 dark:text-${theme}-700`}
                                 >
                                     Message
                                 </label>
@@ -146,7 +150,7 @@ const Contact = () => {
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-200 dark:text-slate-700 dark:hover:text-slate-200 transition-all duration-500 text-slate-500 placeholder:text-slate-400"
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-${theme}-800 dark:hover:bg-${theme}-700 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 transition-all duration-500 text-${theme}-500 placeholder:text-slate-400`}
                                     style={{ resize: 'none' }}
                                 />
                             </div>
@@ -154,7 +158,7 @@ const Contact = () => {
                             <div className="m-4">
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-blue-400 to-slate-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300 text-gray-800 py-3 dark:text-slate-900 dark:hover:text-slate-200 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer"
+                                    className={`w-full bg-gradient-to-r from-${theme}-400 to-${theme}-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300 text-${theme}-700 py-3 dark:text-${theme}-700 dark:hover:text-${theme}-600 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer`}
                                 >
                                     Send Message
                                 </button>

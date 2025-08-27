@@ -26,17 +26,17 @@ const About: React.FC<HeroProps> = ({ theme }) => {
             <div
                 className={`max-w-6xl mx-auto text-slate-800 dark:from-${theme}-900 dark:via-${theme}-800 dark:to-${theme}-900 `}
             >
-                <SectionTitle text="About Me" />
+                 <SectionTitle text="About Me" theme={theme} />
 
-                <div className="grid md:grid-cols-2 gap-12 items-center text-slate-900 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-200">
-                    <div className="bg-slate-200/20 backdrop-blur-sm rounded-2xl p-8 border border-slate-500/20 hover:border-slate-700/60 dark:hover:border-slate-300 transition-all duration-300">
+                <div className={`grid md:grid-cols-2 gap-12 items-center text-${theme}-700 hover:text-${theme}-600 dark:text-slate-400 dark:hover:text-slate-200`}>
+                    <div className={`bg-${theme}-200/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-500/60 hover:border-${theme}-700/60 dark:hover:border-${theme}-300 transition-all duration-300`}>
                         <div className="flex items-center mb-6 space-x-3">
-                            <User className="w-6 h-7 text-slate-900 hover:text-slate-950 font-black  dark:text-slate-400 dark:hover:text-slate-200" />
-                            <h3 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-200">
+                            <User className={`w-6 h-7 text-${theme}-700 hover:text-${theme}-600 font-black  dark:text-${theme}-400 dark:hover:text-${theme}-200`} />
+                            <h3 className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
                                 My Story
                             </h3>
                         </div>
-                        <p className="text-slate-900 hover:text-slate-950 leading-relaxed mb-8  dark:text-slate-400 dark:hover:text-slate-200">
+                        <p className={`text-${theme}-700 hover:text-${theme}-600 leading-relaxed mb-8  dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
                             My heart is happy, I am here, and I am moving
                             forward. Despite all the hardships, I am rebuilding
                             my life: one line of code, one word of German, one
@@ -61,19 +61,19 @@ const About: React.FC<HeroProps> = ({ theme }) => {
                             will emigrate, I will save us.
                         </p>
                     </div>
-                    <div className="bg-slate-200/20 backdrop-blur-sm rounded-2xl p-8 border border-slate-500/60 hover:border-slate-700/60 transition-all duration-300 dark:hover:border-slate-300">
+                    <div className={`bg-${theme}-200/60 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-500/60 hover:border-${theme}-700/60 transition-all duration-300 dark:hover:border-${theme}-300`}>
                         <div className="flex items-center mb-6 space-x-3">
-                            <Code className="w-6 h-7  text-slate-900 hover:text-slate-950 font-black dark:text-slate-400 dark:hover:text-slate-200" />
-                            <h2 className="font-semibold text-2xl hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 ">
+                            <Code className={`w-6 h-7  text-${theme}-700 hover:text-${theme}-600 font-black dark:text-${theme}-400 dark:hover:text-${theme}-200`}/>
+                            <h2 className={`font-semibold text-2xl hover:text-${theme}-700 dark:text-${theme}-600 dark:hover:text-${theme}-200 `}>
                                 What I Do
                             </h2>
                         </div>
-                        <div className="space-y-4 dark:hover:text-slate-200 dark:text-slate-100 ">
+                        <div className={`space-y-4 dark:hover:text-${theme}-200 dark:text-${theme}-100 `}>
                             {iDo.map((item) => (
-                                <div className="flex items-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors duration-200">
-                                    <div className="w-3 h-3 rounded-full mr-3 bg-gray-700 dark:bg-slate-500 dark:hover:bg-slate-200 transition-colors duration-200"></div>
+                                <div className={`flex items-center hover:text-${theme}-700 dark:text-${theme}-600 dark:hover:text-${theme}-200 transition-colors duration-200`}>
+                                    <div className={`w-3 h-3 rounded-full mr-3 bg-${theme}-700 dark:bg-${theme}-600 dark:hover:bg-${theme}-200 transition-colors duration-200`}></div>
                                     {item}
-                                    <span className="text-slate-800 hover:text-slate-500 dark:text-slate-400 dark:hover:text-slate-200"></span>
+                                    <span className={`text-${theme}-700 hover:text-${theme}-600 dark:text-${theme}-400 dark:hover:text-${theme}-200`}></span>
                                 </div>
                             ))}
                         </div>

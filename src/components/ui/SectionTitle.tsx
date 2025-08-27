@@ -2,6 +2,7 @@ import React from 'react';
 
 interface SectionTitleProps {
     text: string;
+    theme: string;
 }
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ text }) => {

@@ -13,6 +13,8 @@ interface Project {
 interface ProjectCardProps {
     project: Project;
     index: number;
+    theme: string;
+
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
