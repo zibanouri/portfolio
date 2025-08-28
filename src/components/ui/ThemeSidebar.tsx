@@ -1,7 +1,10 @@
 import { SunMoon, Moon, Sun, Palette, Languages, ChevronLeft, ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
+import { translations, type Language } from '../lib/translate';
 
 interface ThemeSidebarProps {
+    lang: Language;
+    setLang: (lang: Language) => void;
     theme: string;
     setTheme: (theme: string) => void;
     darkMode: boolean;
@@ -12,11 +15,13 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
     setTheme,
     darkMode,
     toggleTheme,
+    lang,
+    setLang,
 
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const themes = [
-        { id: 'gray', name: 'Gray', color: 'bg-slate-500' },
+        { id: 'slate', name: 'Gray', color: 'bg-slate-500' },
         { id: 'purple', name: 'Purple', color: 'bg-purple-500' },
         { id: 'red', name: 'Red', color: 'bg-red-500' },
         { id: 'green', name: 'Green', color: 'bg-emerald-500' },
@@ -27,11 +32,9 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
     ];
 
     const languages = [
-        { id: 'en', country: 'US', name: 'English' },
-        { id: 'ja', country: 'JP', name: '日本語' },
-        { id: 'fr', country: 'FR', name: 'Français' },
-        { id: 'de', country: 'DE', name: 'Deutsch' },
-
+       { id: 'en', name: 'English' },
+       { id: 'de', name: 'Deutsch' },
+       { id: 'ja', name: '日本語' },
     ];
 
     return (
@@ -117,6 +120,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                     </div>
                     <div>
                         <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700 mt-3 dark:text-slate-200">
+
                             <Languages className="w-4 h-4 mr-2" />
                             Languages
                         </h3>
@@ -124,6 +128,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                             {languages.map((lang, index) => (
                                 <button
                                     key={index}
+                                  onClick={() => setLang(lang.id as Language)}
                                     className="w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer"
                                 >
 

@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { translations, type Language } from './lib/translate';
 
 interface NavbarProps {
     theme: string;
+     lang: Language;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ theme }) => {
+const Navbar: React.FC<NavbarProps> = ({ theme , lang}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -126,8 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                         Ziba Nouri
                     </div>
                     <div className="hidden md:flex space-x-8 text-2xl  dark:text-slate-200 dark:hover:text-slate-300 ">
-                        {['home', 'about', 'skills', 'projects', 'contact'].map(
-                            (item) => (
+                         {translations[lang].navbar.title.map((item) => (
                                 <button
                                     key={item}
                                     onClick={() => scrollSection(item)}
@@ -162,13 +163,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                 {isMenuOpen && (
                     <div className="md:hidden py-4 bg-white/90 rounded-lg mt-2 border border-gray-400/20 backdrop-blur-md ">
                         <div className="flex flex-col space-y-4 px-4 ">
-                            {[
-                                'home',
-                                'about',
-                                'skills',
-                                'projects',
-                                'contact',
-                            ].map((item) => (
+                            {translations[lang].navbar.title.map((item) => (
                                 <button
                                     key={item}
                                     onClick={() => scrollSection(item)}

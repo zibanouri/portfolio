@@ -1,9 +1,12 @@
 import { ArrowDown } from 'lucide-react';
+import { translations, type Language } from './lib/translate';
+
 interface HeroProps {
     theme: string;
+     lang: Language;
 }
 
-const Hero: React.FC<HeroProps> = ({ theme }) => {
+const Hero: React.FC<HeroProps> = ({ theme ,lang}) => {
     const scrollSection = (sectionID: string) => {
         const element = document.getElementById(sectionID);
         if (element) {
@@ -31,19 +34,19 @@ const Hero: React.FC<HeroProps> = ({ theme }) => {
                 <div className="text-center md:text-left max-w-2xl">
                     <div className="mb-6">
                         <h1 className="text-4xl md:text-7xl font-bold color-slate-900: oklch(0.208 0.042 265.755) dark:text-slate-400 dark:hover:text-slate-200">
-                            Ziba Nouri
+                             {translations[lang].hero.name}
                         </h1>
                     </div>
                     <div className="mb-8">
                         <p className="text-xl md:text-2xl text-gray-800  dark:text-slate-400 dark:hover:text-slate-200">
-                            ● Frontend Developer
+                            ●  {translations[lang].hero.front}
                         </p>
                     </div>
                     <div className="mb-8">
                         <div className="text-lg text-slate-300 leading-relaxed space-y-2">
                             <p className="mt-4">
                                 <span className="text-gray-700 font-semibold dark:text-slate-400 dark:hover:text-slate-200">
-                                    Hello friends
+                                     {translations[lang].hero.hello}
                                 </span>
                             </p>
                         </div>
@@ -53,13 +56,13 @@ const Hero: React.FC<HeroProps> = ({ theme }) => {
                             onClick={() => scrollSection('projects')}
                             className={`px-8 py-4 bg-gradient-to-r from-${theme}-400 to-${theme}-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300  dark:text-slate-800 dark:hover:text-slate-800`}
                         >
-                            View My Work
+                             {translations[lang].hero.work}
                         </button>
                         <button
                             onClick={() => scrollSection('contact')}
                             className="px-8 py-4 text-blue-400 font-semibold rounded-lg border border-sky-300 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-slate-400 dark:hover:text-slate-500"
                         >
-                            Get In Touch
+                            {translations[lang].hero.touch}
                         </button>
                     </div>
                 </div>
