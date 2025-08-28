@@ -2,31 +2,30 @@ import React, { useState } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import SectionTitle from './ui/SectionTitle';
 
-
 interface ContactProps {
     theme: string;
 }
 const Contact: React.FC<ContactProps> = ({ theme }) => {
-const socials = [
-    {
-        URL: 'mailto:zn.zibanouri@gmail.com',
-        icon: Mail,
-        title: 'Email',
-        displayURL: 'zn.zibanouri@gmail.com',
-    },
-    {
-        URL: 'https://github.com/zibanouri',
-        icon: Github,
-        title: 'GitHub',
-        displayURL: 'github.com/zibanouri',
-    },
-    {
-        URL: 'https://www.linkedin.com/in/ziba-nouri/',
-        icon: Linkedin,
-        title: 'LinkedIn',
-        displayURL: 'linkedin.com/in/ziba-nouri',
-    },
-];
+    const socials = [
+        {
+            URL: 'mailto:zn.zibanouri@gmail.com',
+            icon: Mail,
+            title: 'Email',
+            displayURL: 'zn.zibanouri@gmail.com',
+        },
+        {
+            URL: 'https://github.com/zibanouri',
+            icon: Github,
+            title: 'GitHub',
+            displayURL: 'github.com/zibanouri',
+        },
+        {
+            URL: 'https://www.linkedin.com/in/ziba-nouri/',
+            icon: Linkedin,
+            title: 'LinkedIn',
+            displayURL: 'linkedin.com/in/ziba-nouri',
+        },
+    ];
 
     const [formData, setFormData] = useState({
         name: '',
@@ -59,14 +58,16 @@ const socials = [
     return (
         <section
             id="contact"
-            className={`py-20 px-4  bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-900 dark:via-${theme}-800 dark:to-${theme}-900 `}
+            className={`py-20 px-4  bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 `}
         >
             <div className="max-w-6xl mx-auto">
-                <SectionTitle text="Get in Touch" />
+                <SectionTitle text="Get in Touch" theme={theme} />
 
                 <div className="grid md:grid-cols-2 gap-12">
                     <div>
-                        <h3 className={`text-2xl font-semibold mb-8 dark:text-${theme}-500 dark:hover:text-${theme}-200`}>
+                        <h3
+                            className={`text-2xl font-semibold mb-8 dark:text-${theme}-500 dark:hover:text-${theme}-200`}
+                        >
                             Let's Connect!
                         </h3>
                         <div className="space-y-6">
@@ -78,14 +79,20 @@ const socials = [
                                         href={social.URL}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`flex items-center p-4 bg-white/10 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 dark:bg-${theme}-800 dark:hover:bg-${theme}-700 transition-all duration-300 group`}
+                                        className={`flex items-center p-4 bg-white/10 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 dark:bg-slate-200 dark:hover:bg-slate-100 transition-all duration-300 group`}
                                     >
-                                        <Icon className={`w-6 h-6 text-${theme}-500 dark:text-${theme}-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]`} />
+                                        <Icon
+                                            className={`w-6 h-6 text-${theme}-500 dark:text-${theme}-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]`}
+                                        />
                                         <div>
-                                            <div className={`font-medium dark:text-${theme}-500 dark:hover:text-${theme}-200`}>
+                                            <div
+                                                className={`font-medium dark:text-${theme}-500 dark:hover:text-${theme}-600`}
+                                            >
                                                 {social.title}
                                             </div>
-                                            <div className={`text-${theme}-600 text-sm dark:text-${theme}-700 dark:hover:text-slate-100`}>
+                                            <div
+                                                className={`text-${theme}-600 text-sm dark:text-${theme}-700 dark:hover:text-slate-800`}
+                                            >
                                                 {social.displayURL}
                                             </div>
                                         </div>
@@ -100,7 +107,7 @@ const socials = [
                             <div className="mt-3">
                                 <label
                                     htmlFor="name"
-                                    className={`block text-sm font-medium mb-1 dark:text-${theme}-700`}
+                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
                                 >
                                     Name
                                 </label>
@@ -112,14 +119,14 @@ const socials = [
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-${theme}-800 dark:hover:bg-${theme}-700 dark:border-${theme}-300 dark:hover:border-${theme}-500 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-300 dark:hover:border-${theme}-500 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400`}
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="email"
-                                    className={`block text-sm font-medium mb-1 dark:text-${theme}-700`}
+                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
                                 >
                                     Email
                                 </label>
@@ -131,14 +138,14 @@ const socials = [
                                     onChange={handleInputChange}
                                     required
                                     placeholder="your email@example.com"
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-${theme}-800 dark:hover:bg-${theme}-700 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-300 text-${theme}-500 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-300 text-${theme}-500 placeholder:text-slate-400`}
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="message"
-                                    className={`block text-sm font-medium mb-1 dark:text-${theme}-700`}
+                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
                                 >
                                     Message
                                 </label>
@@ -150,7 +157,7 @@ const socials = [
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-${theme}-800 dark:hover:bg-${theme}-700 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 transition-all duration-500 text-${theme}-500 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 transition-all duration-500 text-${theme}-500 placeholder:text-slate-400`}
                                     style={{ resize: 'none' }}
                                 />
                             </div>

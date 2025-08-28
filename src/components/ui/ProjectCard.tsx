@@ -17,9 +17,9 @@ interface ProjectCardProps {
 
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
     return (
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-400/20 hover:border-gray-400/80 dark:text-slate-400 dark:hover:text-slate-200 transition-all duration-300 group flex flex-col h-full">
+        <div className={`bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-${theme}-400/20 hover:border-${theme}-400/80 dark:text-slate-400 dark:hover:text-slate-200 bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 transition-all duration-300 group flex flex-col h-full`}>
             <div className="relative overflow-hidden">
                 <img
                     src={project.imageURL}
@@ -27,12 +27,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     className="w-full h-full object-cover"
                 />
                 <div
-                    className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-orange-600/20
+                    className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-700/20
                         opacity-60 group-hover:opacity-20  dark:bg-slate-400 dark:hover:bg-slate-600 transition-opacity duration-300"
                 ></div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-lg font-semibold mb-3 text-slate-800 group-hover:text-slate-600 duration-300 transition-colors dark:text-red-900 dark:hover:text-red-600 ">
+                <h3 className="text-lg font-semibold mb-3 text-slate-800 group-hover:text-slate-600 duration-300 transition-colors dark:text-slate-900 dark:hover:text-slate-900 ">
                     {project.title}
                 </h3>
                 <p className="text-slate-600 text-sm mb-4 leading-relaxed flex-grow  dark:text-slate-300 dark:hover:text-slate-100">

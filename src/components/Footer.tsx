@@ -1,6 +1,10 @@
 import { Linkedin, Mail, Github, Instagram } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+    theme: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ theme }) => {
     const currentYear = new Date().getFullYear();
     const socialLinks = [
         {
@@ -26,11 +30,15 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="py-12 px-4 border-t border-gray-500/30 bg-gradient-to-br from-gray-900 to-slate-800 backdrop-blur-sm">
+        <footer
+            className={`py-12 px-4 border-t border-gray-500/30 bg-gradient-to-br from-slate-800 to-${theme}-900 backdrop-blur-sm`}
+        >
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0 text-center md:text-left">
-                        <div className="text-2xl font-bold text-gray-100 bg-clip-text mb-2">
+                        <div
+                            className={`text-2xl font-bold text-slate-100 bg-clip-text mb-2`}
+                        >
                             Ziba Nouri
                         </div>
                         <p className="text-slate-300 text-sm dark:text-slate-600 dark:hover:text-slate-200">
@@ -59,7 +67,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-black/30 text-center">
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-gray-900 text-sm">
                         © {currentYear} Ziba Nouri. All Rights Reserved. Made
                         with love by{' '}
                         <a

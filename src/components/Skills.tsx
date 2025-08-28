@@ -43,17 +43,21 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
             className={`py-20 px-4 bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
         >
             <div className="max-w-6xl mx-auto">
-                <SectionTitle text="My Skills" />
+                <SectionTitle text="My Skills" theme={theme} />
 
                 <div className="grid md:grid-cols-3 gap-8 ">
                     {SkillCategory.map((category) => (
                         <div
                             key={category.title}
-                            className={` bg-slate-200 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-300 hover:border-${theme}-500 transition-all duration-300 shadow-sm hover:shadow-md  dark:bg-${theme}-800 dark:hover:bg-${theme}-800`}
+                            className={`bg-slate-100 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-300 hover:border-${theme}-500 transition-all duration-300 shadow-sm hover:shadow-md  dark:bg-slate-700 `}
                         >
                             <div className="flex items-center mb-6 ">
-                                <Code className={`w-6 h-6 text-${theme}-600 mr-3 `} />
-                                <h3 className={`text-xl font-semibold text-${theme}-600 dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
+                                <Code
+                                    className={`w-6 h-6 text-${theme}-600 mr-3 `}
+                                />
+                                <h3
+                                    className={`text-xl font-semibold text-${theme}-600 dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                >
                                     {category.title}
                                 </h3>
                             </div>
@@ -61,19 +65,21 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
                             <div className="space-y-4">
                                 {category.skills.map((skill) => (
                                     <div key={skill.name} className="space-y-2">
-                                        <div className={`flex justify-between items-center  dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
-                                            <span className={`text-gray-700 text-sm dark:text-${theme}-400 dark:hover:text-${theme}-200 `}>
+                                        <div
+                                            className={`flex justify-between items-center  dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                        >
+                                            <span
+                                                className={`text-${theme}-600 text-sm dark:text-${theme}-400 dark:hover:text-${theme}-200 `}
+                                            >
                                                 {skill.name}
                                             </span>
-                                            <span className={`text-${theme}-600 text-sm font-medium dark:text-${theme}-400 dark:hover:text-${theme}-200 `}>
+                                            <span className="text-slate-600 text-sm font-medium dark:text-slate-400 dark:hover:textslate00">
                                                 {skill.level}%
                                             </span>
                                         </div>
-                                        <div
-                                            className={`w-full bg-${theme}-100 rounded-full h-2  dark:text-${theme}-400 dark:hover:text-${theme}-200  dark:bg-slate-400 dark:hover:bg-slate-200`}
-                                        >
+                                        <div className="w-full bg-${theme}-100 rounded-full h-2  dark:text-${theme}-400 dark:hover:text-${theme}-200  dark:bg-slate-200 dark:hover:bg-slate-200">
                                             <div
-                                                className={`bg-gradient-to-r from-${theme}-700 to-${theme}-600 h-2 rounded-full transition-all duration-300 ease-out  dark:text-${theme}-400 dark:hover:text-${theme}-100`}
+                                                className="bg-gradient-to-r from-slate-700 to-slate-600 h-2 rounded-full transition-all duration-300 ease-out  dark:text-slate-400 dark:hover:text-slate-300"
                                                 style={{
                                                     width: `${skill.level}%`,
                                                 }}

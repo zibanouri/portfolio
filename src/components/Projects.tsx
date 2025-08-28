@@ -1,14 +1,11 @@
 import SectionTitle from './ui/SectionTitle';
 import ProjectCard from './ui/ProjectCard';
 
-
 interface ProjectsProps {
     theme: string;
 }
 
 const Projects: React.FC<ProjectsProps> = ({ theme }) => {
-
-
     const projects = [
         {
             imageURL: '/portfolio/project-image/project1.webp',
@@ -69,10 +66,11 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
     return (
         <section
             id="projects"
-            className={`py-20 px-4 relative min-h-screen bg-gradient-to-br from-slate-100 via-slate-50  text-4xl text-left dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 `}
+            className={`py-20 px-4 relative min-h-screen bg-gradient-to-br from-${theme}-100 via-${theme}-50  text-4xl text-left dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 `}
+            aria-labelledby="projects-title"
         >
             <div className="max-w-6xl mx-auto">
-                  <SectionTitle text="Projects" theme={theme} />
+                <SectionTitle text="Projects" theme={theme} />
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <ProjectCard

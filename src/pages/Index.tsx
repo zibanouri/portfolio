@@ -37,9 +37,9 @@ const Index = () => {
             <Hero theme={theme} />
             <About theme={theme} />
             <Skills theme={theme} />
-            <Projects />
-            <Contact theme={theme}/>
-            <Footer />
+            <Projects theme={theme} />
+            <Contact theme={theme} />
+            <Footer theme={theme} />
             <>
                 {() => {
                     return `
@@ -78,9 +78,7 @@ dark:hover:bg-red-200 dark:hover:bg-rose-200 dark:hover:bg-pink-200 dark:hover:b
  dark:hover:border-red-300 dark:hover:border-rose-300 dark:hover:border-pink-300 dark:hover:border-yellow-300 dark:hover:border-green-300 dark:hover:border-purple-300 dark:hover:border-blue-300 dark:hover:border-gray-300
   
 `;
-
                 }}
-
             </>
         </div>
     );
