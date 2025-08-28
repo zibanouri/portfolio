@@ -53,6 +53,7 @@ export const translations = {
             touch: "お問い合わせ",
         }
     },
+    
 } as const;
 
 export type Language = keyof typeof translations;
