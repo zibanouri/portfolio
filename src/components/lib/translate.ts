@@ -15,6 +15,11 @@ export const translations = {
             hello: "Hello friends",
             work: "View My Work",
             touch: "Get In Touch",
+        },
+        sidebar: {
+            mode: "Mode",
+            theme: "Theme",
+            language: "Language"
         }
     },
     de: {
@@ -33,6 +38,11 @@ export const translations = {
             hello: "Hallo zusammen",
             work: "Meine Arbeiten ansehen",
             touch: "Kontakt aufnehmen",
+        },
+        sidebar: {
+            mode: "Modus",
+            theme: "Thema",
+            language: "Sprache"
         }
     },
     ja: {
@@ -51,9 +61,13 @@ export const translations = {
             hello: "こんにちは",
             work: "作品を見る",
             touch: "お問い合わせ",
+        },
+        sidebar: {
+            mode: "モード",
+            theme: "テーマ",
+            language: "言語"
         }
     },
-    
 } as const;
 
 export type Language = keyof typeof translations;

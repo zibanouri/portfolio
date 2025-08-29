@@ -11,11 +11,11 @@ interface ThemeSidebarProps {
     toggleTheme: () => void;
 }
 const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
+    lang,
     theme,
     setTheme,
     darkMode,
     toggleTheme,
-    lang,
     setLang,
 
 }) => {
@@ -32,13 +32,13 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
     ];
 
     const languages = [
-       { id: 'en', name: 'English' },
-       { id: 'de', name: 'Deutsch' },
-       { id: 'ja', name: '日本語' },
+        { id: 'en', name: 'English' },
+        { id: 'de', name: 'Deutsch' },
+        { id: 'ja', name: '日本語' },
     ];
 
     return (
-         <>
+        <>
             {/* Backdrop overlay when sidebar is open */}
             {isOpen && (
                 <div
@@ -49,24 +49,23 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
             )}
 
             {/* Sidebar Panel */}
-             <div
+            <div
                 className={`fixed top-1/2 -translate-y-1/2 z-50 transition-all duration-300
                     ${isOpen ? 'right-0' : '-right-80'}`}
             >
                 <div
                     className={` bg-white/95 dark:bg-slate-800/95 backdrop-blur-md rounded-l-2xl shadow-2xl 
                         transition-all duration-300 border p-4 md:p-6 w-80 max-h-[90vh] overflow-y-auto
-                ${
-                   theme === "blue" ? " border-blue-500 hover:border-blue-400 dark:border-blue-600 dark:hover:border-blue-500" :
-                        theme === "gray" ? " border-slate-500 hover:border-slate-400 dark:border-slate-600 dark:hover:border-slate-500" :
-                            theme === "red" ? " border-red-500 hover:border-red-400 dark:border-red-600 dark:hover:border-red-500" :
-                                theme === "green" ? " border-emerald-500 hover:border-emerald-400 dark:border-emerald-600 dark:hover:border-emerald-500" :
-                                    theme === "yellow" ? " border-yellow-500 hover:border-yellow-400 dark:border-yellow-600 dark:hover:border-yellow-500" :
-                                        theme === "pink" ? " border-pink-500 hover:border-pink-400 dark:border-pink-600 dark:hover:border-pink-500" :
-                                            theme === "purple" ? " border-purple-500 hover:border-purple-400 dark:border-purple-600 dark:hover:border-purple-500" :
-                                                theme === "rose" ? " border-rose-500 hover:border-rose-400 dark:border-rose-600 dark:hover:border-rose-500" :
-                                                    " border-slate-500 hover:border-slate-400 dark:border-slate-600 dark:hover:border-slate-500"
-                }     
+                ${theme === "blue" ? " border-blue-500 hover:border-blue-400 dark:border-blue-600 dark:hover:border-blue-500" :
+                            theme === "gray" ? " border-slate-500 hover:border-slate-400 dark:border-slate-600 dark:hover:border-slate-500" :
+                                theme === "red" ? " border-red-500 hover:border-red-400 dark:border-red-600 dark:hover:border-red-500" :
+                                    theme === "green" ? " border-emerald-500 hover:border-emerald-400 dark:border-emerald-600 dark:hover:border-emerald-500" :
+                                        theme === "yellow" ? " border-yellow-500 hover:border-yellow-400 dark:border-yellow-600 dark:hover:border-yellow-500" :
+                                            theme === "pink" ? " border-pink-500 hover:border-pink-400 dark:border-pink-600 dark:hover:border-pink-500" :
+                                                theme === "purple" ? " border-purple-500 hover:border-purple-400 dark:border-purple-600 dark:hover:border-purple-500" :
+                                                    theme === "rose" ? " border-rose-500 hover:border-rose-400 dark:border-rose-600 dark:hover:border-rose-500" :
+                                                        " border-slate-500 hover:border-slate-400 dark:border-slate-600 dark:hover:border-slate-500"
+                        }     
                         `}
                     data-sidebar
                     aria-label="Theme and Language Settings"
@@ -74,7 +73,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                     <div className="flex items-center justify-between mb-3">
                         <span className="text-sm font-medium flex items-center text-slate-700 dark:text-slate-200">
                             <SunMoon className="w-4 h-4 mr-2" />
-                            Theme Mode
+                            {translations[lang].sidebar.mode}
                         </span>
                         <button
                             className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 
@@ -93,7 +92,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                     <div>
                         <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700 dark:text-slate-200">
                             <Palette className="w-4 h-4 mr-2" />
-                            Color Themes
+                            {translations[lang].sidebar.theme}
                         </h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                             {themes.map((t) => (
@@ -122,19 +121,39 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                         <h3 className="text-sm font-medium mb-3 flex items-center text-slate-700 mt-3 dark:text-slate-200">
 
                             <Languages className="w-4 h-4 mr-2" />
-                            Languages
+                            {translations[lang].sidebar.theme}
                         </h3>
                         <div className="space-y-2">
-                            {languages.map((lang, index) => (
+                            {/* {languages.map((langItem, index) => (
                                 <button
                                     key={index}
                                   onClick={() => setLang(lang.id as Language)}
-                                    className="w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer"
+                                    className=
+                                    {`w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer  ${
+                                            langItem.id === lang
+                                                ? 'border-current shadow-md'
+                                                : 'border-transparent hover:border-slate-300'
+                                        }`}
+                                     aria-label={`Switch to ${langItem.name}`}
+                                > */}
+                            {languages.map((langItem, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setLang(langItem.id as Language)}
+                                    className={`w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer
+                                         ${langItem.id === lang
+                                            ? 'border-current shadow-md'
+                                            : 'border-transparent hover:border-slate-300'
+                                        }`}
+                                    aria-label={`Switch to ${langItem.name}`}
                                 >
-
-                                    <span className="text-sm">{lang.name}</span>
+                                    <span className="text-sm">{langItem.name}</span>
                                 </button>
                             ))}
+
+                            {/* <span className="text-sm">{langItem.name}</span>
+                                </button>
+                            ))} */}
 
                         </div>
                     </div>
@@ -167,7 +186,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                     <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
                 )}
             </button>
-            
+
         </>
     )
 
@@ -175,5 +194,13 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
 
 
 export default ThemeSidebar;
+
+
+
+
+
+
+
+
 
 
