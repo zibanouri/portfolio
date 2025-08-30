@@ -1,11 +1,13 @@
 import { User, Code, Download } from 'lucide-react';
 import SectionTitle from './ui/SectionTitle';
+import { translations, type Language } from './lib/translate';
 
 interface HeroProps {
     theme: string;
+     lang: Language;
 }
 
-const About: React.FC<HeroProps> = ({ theme }) => {
+const About: React.FC<HeroProps> = ({ theme,lang }) => {
     const iDo = [
         'Front-End Development',
         'React & React Ecosystem',
@@ -37,7 +39,8 @@ const About: React.FC<HeroProps> = ({ theme }) => {
                                 className={`w-6 h-7 text-${theme}-700 hover:text-${theme}-600 font-black  dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
                             <h3 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-100">
-                                My Story
+                               
+                               {translations[lang].about.story}
                             </h3>
                         </div>
                         <p
@@ -75,7 +78,7 @@ const About: React.FC<HeroProps> = ({ theme }) => {
                                 className={`w-6 h-7  text-${theme}-700 hover:text-${theme}-600 font-black dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
                             <h2 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-100">
-                                What I Do
+                                {translations[lang].about.iDo}
                             </h2>
                         </div>
                         <div

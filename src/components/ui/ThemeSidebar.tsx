@@ -124,12 +124,12 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                             {translations[lang].sidebar.theme}
                         </h3>
                         <div className="space-y-2">
-                           
+
                             {languages.map((langItem, index) => (
                                 <button
                                     key={index}
                                     onClick={() => setLang(langItem.id as Language)}
-                                    className={`w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer
+                                    className={`w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] border border-slate-800 border:hover:${theme}-500 dark:border-${theme} text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer
                                          ${langItem.id === lang
                                             ? 'border-current shadow-md'
                                             : 'border-transparent hover:border-slate-300'
