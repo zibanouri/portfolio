@@ -81,13 +81,9 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                         rel="noopener noreferrer"
                                         className={`flex items-center p-4 bg-white/10 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 dark:bg-slate-200 dark:hover:bg-slate-100 transition-all duration-300 group`}
                                     >
-                                        <Icon
-                                            className="w-6 h-6 text-slate-600 dark:text-slate-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]"
-                                        />
+                                        <Icon className="w-6 h-6 text-slate-600 dark:text-slate-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
                                         <div>
-                                            <div
-                                                className="font-medium dark:text-slate-600"
-                                            >
+                                            <div className="font-medium dark:text-slate-600">
                                                 {social.title}
                                             </div>
                                             <div

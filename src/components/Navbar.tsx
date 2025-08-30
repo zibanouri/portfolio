@@ -4,10 +4,10 @@ import { translations, type Language } from './lib/translate';
 
 interface NavbarProps {
     theme: string;
-     lang: Language;
+    lang: Language;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ theme , lang}) => {
+const Navbar: React.FC<NavbarProps> = ({ theme, lang }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -127,25 +127,24 @@ const Navbar: React.FC<NavbarProps> = ({ theme , lang}) => {
                     >
                         Ziba Nouri
                     </div>
-                    <div className="hidden md:flex space-x-8 text-2xl  dark:text-slate-200 dark:hover:text-slate-300 ">
-                         {translations[lang].navbar.title.map((item) => (
-                                <button
-                                    key={item}
-                                    onClick={() => scrollSection(item)}
-                                    className={`capitalize dark:text-slate-200 
+                    <div className="hidden md:flex space-x-8 text-base font-normal dark:text-slate-200 dark:hover:text-slate-300">
+                        {translations[lang].navbar.title.map((item) => (
+                            <button
+                                key={item}
+                                onClick={() => scrollSection(item)}
+                                className={`capitalize dark:text-slate-200 
                                       ${navHover()}
                                     transition-all duration-300 cursor-pointer font-sans relative group`}
-                                    aria-label={`Go to ${item} section`}
-                                >
-                                    {item}
-                                    <span
-                                        className={`absolute -bottom-1 left-0 w-0 h-0.5
+                                aria-label={`Go to ${item} section`}
+                            >
+                                {item}
+                                <span
+                                    className={`absolute -bottom-1 left-0 w-0 h-0.5
                                      ${navLink()}
                                       group-hover:w-full transition-all duration-300`}
-                                    ></span>
-                                </button>
-                            )
-                        )}
+                                ></span>
+                            </button>
+                        ))}
                     </div>
                     <button
                         className="md:hidden p-2 rounded-lg hover:bg-gray-100/5 transition-colors dark:bg-slate-300 dark:hover:bg-slate-300 cursor-pointer"

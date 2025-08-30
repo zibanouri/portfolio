@@ -4,10 +4,10 @@ import { translations, type Language } from './lib/translate';
 
 interface HeroProps {
     theme: string;
-     lang: Language;
+    lang: Language;
 }
 
-const About: React.FC<HeroProps> = ({ theme,lang }) => {
+const About: React.FC<HeroProps> = ({ theme, lang }) => {
     const iDo = [
         'Front-End Development',
         'React & React Ecosystem',
@@ -38,9 +38,10 @@ const About: React.FC<HeroProps> = ({ theme,lang }) => {
                             <User
                                 className={`w-6 h-7 text-${theme}-700 hover:text-${theme}-600 font-black  dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
-                            <h3 className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
-                               
-                               {translations[lang].about.story}
+                            <h3
+                                className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                            >
+                                {translations[lang].about.story}
                             </h3>
                         </div>
                         <p
@@ -77,7 +78,9 @@ const About: React.FC<HeroProps> = ({ theme,lang }) => {
                             <Code
                                 className={`w-6 h-7  text-${theme}-700 hover:text-${theme}-600 font-black dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
-                            <h2 className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
+                            <h2
+                                className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                            >
                                 {translations[lang].about.iDo}
                             </h2>
                         </div>

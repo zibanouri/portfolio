@@ -3,10 +3,10 @@ import { translations, type Language } from './lib/translate';
 
 interface HeroProps {
     theme: string;
-     lang: Language;
+    lang: Language;
 }
 
-const Hero: React.FC<HeroProps> = ({ theme ,lang}) => {
+const Hero: React.FC<HeroProps> = ({ theme, lang }) => {
     const scrollSection = (sectionID: string) => {
         const element = document.getElementById(sectionID);
         if (element) {
@@ -34,19 +34,19 @@ const Hero: React.FC<HeroProps> = ({ theme ,lang}) => {
                 <div className="text-center md:text-left max-w-2xl">
                     <div className="mb-6">
                         <h1 className="text-4xl md:text-7xl font-bold color-slate-900: oklch(0.208 0.042 265.755) dark:text-slate-400 dark:hover:text-slate-200">
-                             {translations[lang].hero.name}
+                            {translations[lang].hero.name}
                         </h1>
                     </div>
                     <div className="mb-8">
                         <p className="text-xl md:text-2xl text-gray-800  dark:text-slate-400 dark:hover:text-slate-200">
-                            ●  {translations[lang].hero.front}
+                            ● {translations[lang].hero.front}
                         </p>
                     </div>
                     <div className="mb-8">
                         <div className="text-lg text-slate-300 leading-relaxed space-y-2">
                             <p className="mt-4">
                                 <span className="text-gray-700 font-semibold dark:text-slate-400 dark:hover:text-slate-200">
-                                     {translations[lang].hero.hello}
+                                    {translations[lang].hero.hello}
                                 </span>
                             </p>
                         </div>
@@ -54,13 +54,13 @@ const Hero: React.FC<HeroProps> = ({ theme ,lang}) => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <button
                             onClick={() => scrollSection('projects')}
-                            className={`px-8 py-4 bg-gradient-to-r from-${theme}-400 to-${theme}-500 text-white border border-${theme}-300 font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-slate-900 dark:hover:text-slate-300`}
+                            className={`px-8 py-4 bg-gradient-to-r from-${theme}-400 to-${theme}-500 text-white border border-${theme}-300 font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-${theme}-900 dark:hover:text-${theme}-300`}
                         >
-                             {translations[lang].hero.work}
+                            {translations[lang].hero.work}
                         </button>
                         <button
                             onClick={() => scrollSection('contact')}
-                            className={`px-8 py-4 text-${theme}-400 font-semibold rounded-lg border border-${theme}-300 hover:bg-${theme}-50 hover:text-${theme}-600 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-slate-900 dark:hover:text-slate-300`}
+                            className={`px-8 py-4 text-${theme}-400 font-semibold rounded-lg border border-${theme}-300 hover:bg-${theme}-50 hover:text-${theme}-600 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-${theme}-500 dark:hover:text-${theme}-300`}
                         >
                             {translations[lang].hero.touch}
                         </button>

@@ -12,7 +12,7 @@ const Index = () => {
     const [darkMode, setDarkMode] = useState(false);
 
     const [theme, setTheme] = useState('slate');
-    const [lang, setLang] = useState<Language>("en");
+    const [lang, setLang] = useState<Language>('en');
 
     useEffect(() => {
         if (darkMode) {
@@ -38,7 +38,7 @@ const Index = () => {
                 toggleTheme={toggleTheme}
             />
             <Hero theme={theme} lang={lang} />
-            <About theme={theme} lang={lang}/>
+            <About theme={theme} lang={lang} />
             <Skills theme={theme} />
             <Projects theme={theme} />
             <Contact theme={theme} />

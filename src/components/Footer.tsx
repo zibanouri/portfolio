@@ -41,7 +41,9 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
                         >
                             Ziba Nouri
                         </div>
-                        <p className={`text-${theme}-300 text-sm dark:text-${theme}-300`}>
+                        <p
+                            className={`text-${theme}-300 text-sm dark:text-${theme}-300`}
+                        >
                             Fulfilling a 20-year-old dream with programming
                         </p>
                     </div>
