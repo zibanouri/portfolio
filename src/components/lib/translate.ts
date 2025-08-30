@@ -8,14 +8,13 @@ export const translations = {
             front: 'Frontend Developer',
             hello: 'Hello friends',
             work: 'View My Work',
-            touch: 'Get In Touch',
+            touch: 'Get In Touch', // استفاده در Contact
         },
         sidebar: {
             mode: 'Mode',
             theme: 'Theme',
             language: 'Language',
         },
-
         about: {
             storyTitle: 'My Story',
             story: `I'm rebuilding my life one line of code, one German word, one day at a time.
@@ -25,6 +24,15 @@ This code is my courage. My promise to my children: I will not give up. I will s
 This is my life. I’m not stopping. I’m coming.`,
             iDoTitle: 'What I Do',
             iDo: ['Front-End Development', 'TypeScript', 'React.js'],
+        },
+        skills: 'Skills',
+        contact: 'Contact', // برای منو و عنوان
+        form: {
+            name: 'Name',
+            email: 'Email',
+            message: 'Message',
+            send: 'Send Message',
+            success: 'Thank You! Your message has been sent successfully!',
         },
     },
     de: {
@@ -49,7 +57,6 @@ This is my life. I’m not stopping. I’m coming.`,
             theme: 'Thema',
             language: 'Sprache',
         },
-
         about: {
             storyTitle: 'Meine Geschichte',
             story: `Ich baue mein Leben neu auf, Zeile für Zeile Code, ein deutsches Wort, einen Tag nach dem anderen.
@@ -59,6 +66,15 @@ Dieser Code ist mein Mut. Meine Versprechen an meine Kinder: Ich werde nicht auf
 Das ist mein Leben. Ich halte nicht an. Ich komme.`,
             iDoTitle: 'Was ich mache',
             iDo: ['Frontend-Entwicklung', 'TypeScript', 'React.js'],
+        },
+        skills: 'Fähigkeiten',
+        contact: 'Kontakt',
+        form: {
+            name: 'Name',
+            email: 'E-Mail',
+            message: 'Nachricht',
+            send: 'Nachricht senden',
+            success: 'Danke! Ihre Nachricht wurde erfolgreich gesendet!',
         },
     },
     ja: {
@@ -86,6 +102,15 @@ Das ist mein Leben. Ich halte nicht an. Ich komme.`,
 これが私の人生です。止まらない。必ずや、私はやってくる。`,
             iDoTitle: '私がすること',
             iDo: ['フロントエンド開発', 'TypeScript', 'React.js'],
+        },
+        skills: 'スキル',
+        contact: '連絡先',
+        form: {
+            name: '名前',
+            email: 'メール',
+            message: 'メッセージ',
+            send: '送信する',
+            success: 'ありがとうございます！メッセージが正常に送信されました！',
         },
     },
 } as const;

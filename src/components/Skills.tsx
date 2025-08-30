@@ -1,11 +1,13 @@
 import { Code } from 'lucide-react';
 import SectionTitle from './ui/SectionTitle';
+import { translations, type Language } from './lib/translate';
 
 interface SkillsProps {
     theme: string;
+    lang: Language;
 }
 
-const Skills: React.FC<SkillsProps> = ({ theme }) => {
+const Skills: React.FC<SkillsProps> = ({ theme, lang }) => {
     const SkillCategory = [
         {
             title: 'Fundamentals',
@@ -41,7 +43,7 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
             className={`py-20 px-4 bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
         >
             <div className="max-w-6xl mx-auto">
-                <SectionTitle text="My Skills" theme={theme} />
+                <SectionTitle text={translations[lang].skills} theme={theme} />
 
                 <div className="grid md:grid-cols-3 gap-8 ">
                     {SkillCategory.map((category) => (

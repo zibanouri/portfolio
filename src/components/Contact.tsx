@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import SectionTitle from './ui/SectionTitle';
+import { translations, type Language } from './lib/translate';
 
 interface ContactProps {
     theme: string;
+    lang: Language;
 }
-const Contact: React.FC<ContactProps> = ({ theme }) => {
+
+const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
     const socials = [
         {
             URL: 'mailto:zn.zibanouri@gmail.com',
@@ -58,15 +61,18 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
     return (
         <section
             id="contact"
-            className={`py-20 px-4  bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 `}
+            className={`py-20 px-4 bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
         >
             <div className="max-w-6xl mx-auto">
-                <SectionTitle text="Get in Touch" theme={theme} />
+                <SectionTitle
+                    text={translations[lang].hero.touch}
+                    theme={theme}
+                />
 
                 <div className="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3
-                            className={`text-2xl font-semibold mb-8 dark:text-${theme}-500`}
+                            className={`text-2xl font-semibold mb-8 text-${theme}-700 dark:text-${theme}-400`}
                         >
                             Let's Connect!
                         </h3>
@@ -79,15 +85,15 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                         href={social.URL}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={`flex items-center p-4 bg-white/10 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 dark:bg-slate-200 dark:hover:bg-slate-100 transition-all duration-300 group`}
+                                        className={`flex items-center p-4 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 transition-all duration-300 group bg-white/10 dark:bg-slate-800/40 backdrop-blur-sm`}
                                     >
-                                        <Icon className="w-6 h-6 text-slate-600 dark:text-slate-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]" />
+                                        <Icon className="w-6 h-6 text-slate-600 dark:text-slate-300 mr-4 group-hover:scale-110 transition-transform" />
                                         <div>
-                                            <div className="font-medium dark:text-slate-600">
+                                            <div className="font-medium text-slate-700 dark:text-slate-200">
                                                 {social.title}
                                             </div>
                                             <div
-                                                className={`text-${theme}-600 text-sm dark:text-${theme}-700 dark:hover:text-slate-800`}
+                                                className={`text-sm text-${theme}-600 dark:text-${theme}-400`}
                                             >
                                                 {social.displayURL}
                                             </div>
@@ -103,9 +109,9 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                             <div className="mt-3">
                                 <label
                                     htmlFor="name"
-                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
+                                    className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300"
                                 >
-                                    Name
+                                    {translations[lang].form.name}
                                 </label>
                                 <input
                                     type="text"
@@ -115,16 +121,18 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-300 dark:hover:border-${theme}-500 dark:text-slate-700  focus:outline-none focus:ring-1 transition-all duration-500 text-slate-700 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border rounded-lg focus:ring focus:ring-offset-2 transition-all duration-300
+                                        dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100 
+                                        border-slate-300 focus:border-${theme}-500 focus:ring-${theme}-200`}
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
+                                    className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300"
                                 >
-                                    Email
+                                    {translations[lang].form.email}
                                 </label>
                                 <input
                                     type="email"
@@ -134,16 +142,18 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="your email@example.com"
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-300 text-${theme}-500 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border rounded-lg focus:ring focus:ring-offset-2 transition-all duration-300
+                                        dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100 
+                                        border-slate-300 focus:border-${theme}-500 focus:ring-${theme}-200`}
                                 />
                             </div>
 
                             <div className="mt-3">
                                 <label
                                     htmlFor="message"
-                                    className="block text-sm font-medium mb-1 dark:text-slate-300"
+                                    className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300"
                                 >
-                                    Message
+                                    {translations[lang].form.message}
                                 </label>
                                 <textarea
                                     id="message"
@@ -153,42 +163,35 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-slate-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-slate-200 dark:hover:bg-slate-200 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-slate-800 dark:hover:text-slate-900 transition-all duration-500 text-slate-800 placeholder:text-slate-100`}
-                                    style={{ resize: 'none' }}
+                                    className={`w-full p-2 border rounded-lg focus:ring focus:ring-offset-2 transition-all duration-300 resize-none
+                                        dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100 
+                                        border-slate-300 focus:border-${theme}-500 focus:ring-${theme}-200`}
                                 />
                             </div>
 
-                            <div className="m-4">
+                            <div className="mt-6">
                                 <button
                                     type="submit"
-                                    className={`w-full bg-gradient-to-r from-${theme}-400 to-${theme}-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-600 text-slate-900 py-3 dark:text-slate-900 dark:hover:text-slate-900 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer`}
+                                    className={`w-full py-3 bg-gradient-to-r from-${theme}-500 to-${theme}-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${theme}-300`}
                                 >
-                                    Send Message
+                                    {translations[lang].form.send}
                                 </button>
                             </div>
                         </form>
+
                         {isSubmitted && (
                             <div
-                                id="toast-success"
-                                className="show-notification flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800"
+                                className="flex items-center mt-4 p-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-900 dark:text-green-200"
                                 role="alert"
                             >
-                                <div className="inline-flex items-center justify-center shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
-                                    <svg
-                                        className="w-5 h-5"
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                    >
-                                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                    </svg>
-                                    <span className="sr-only">Check icon</span>
-                                </div>
-                                <div className="ms-3 text-sm font-normal dark:text-slate-100">
-                                    Thank You! Your message has been sent
-                                    successfully!
-                                </div>
+                                <svg
+                                    className="w-5 h-5 mr-2 text-green-500"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                {translations[lang].form.success}
                             </div>
                         )}
                     </div>
