@@ -55,7 +55,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
             >
                 <div
                     className={` bg-white/95 dark:bg-slate-800/95 backdrop-blur-md rounded-l-2xl shadow-2xl 
-                        transition-all duration-300 border p-4 md:p-6 w-80 max-h-[90vh] overflow-y-auto
+                        transition-all duration-300 p-4 md:p-6 w-80 max-h-[90vh] overflow-y-auto
                 ${theme === "blue" ? " border-blue-500 hover:border-blue-400 dark:border-blue-600 dark:hover:border-blue-500" :
                             theme === "gray" ? " border-slate-500 hover:border-slate-400 dark:border-slate-600 dark:hover:border-slate-500" :
                                 theme === "red" ? " border-red-500 hover:border-red-400 dark:border-red-600 dark:hover:border-red-500" :
@@ -129,7 +129,7 @@ const ThemeSidebar: React.FC<ThemeSidebarProps> = ({
                                 <button
                                     key={index}
                                     onClick={() => setLang(langItem.id as Language)}
-                                    className={`w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] border border-slate-800 border:hover:${theme}-500 dark:border-${theme} text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer
+                                    className={`w-full p-2 rounded-lg text-left transition-all duration-300 transform transform-gpu hover:scale-[1.1] border border-${theme}-800 border:hover:${theme}-500 dark:border-${theme} text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 cursor-pointer
                                          ${langItem.id === lang
                                             ? 'border-current shadow-md'
                                             : 'border-transparent hover:border-slate-300'

@@ -36,16 +36,16 @@ const About: React.FC<HeroProps> = ({ theme, lang }) => {
                     >
                         <div className="flex items-center mb-6 space-x-3">
                             <User
-                                className={`w-6 h-7 text-${theme}-700 hover:text-${theme}-600 font-black  dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                className={`w-6 h-7 text-slate-800 hover:text-slate-950 font-black  dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
                             <h3
-                                className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                className={`font-semibold text-2xl text-slate-800 hover:text-slate-950 dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             >
                                 {translations[lang].about.story}
                             </h3>
                         </div>
                         <p
-                            className={`text-slate-700 hover:text-slate-600 leading-relaxed mb-8  dark:text-slate-400 dark:hover:text-${theme}-200`}
+                            className={`text-slate-800 hover:text-slate-950 leading-relaxed mb-8  dark:text-slate-400 dark:hover:text-${theme}-200`}
                         >
                             My heart is happy, I am here, and I am moving
                             forward. Despite all the hardships, I am rebuilding
@@ -76,16 +76,16 @@ const About: React.FC<HeroProps> = ({ theme, lang }) => {
                     >
                         <div className="flex items-center mb-6 space-x-3">
                             <Code
-                                className={`w-6 h-7  text-${theme}-700 hover:text-${theme}-600 font-black dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                className={`w-6 h-7  text-slate-800 hover:text-slate-950 font-black dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
                             <h2
-                                className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                className={`font-semibold text-2xl text-slate-800 hover:text-slate-950 dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             >
                                 {translations[lang].about.iDo}
                             </h2>
                         </div>
                         <div
-                            className={`space-y-4 dark:hover:text-${theme}-400 dark:text-${theme}-200 `}
+                            className={`space-y-4 text-slate-800 hover:text-slate-950 dark:hover:text-${theme}-400 dark:text-${theme}-200 `}
                         >
                             {iDo.map((item) => (
                                 <div
