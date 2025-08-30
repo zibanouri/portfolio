@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ theme, lang }) => {
                 </div>
                 <div className="text-center md:text-left max-w-2xl">
                     <div className="mb-6">
-                        <h1 className="text-4xl md:text-7xl font-bold color-slate-900: oklch(0.208 0.042 265.755) dark:text-slate-400 dark:hover:text-slate-200">
+                        <h1 className={`text-4xl md:text-5xl font-bold color-slate-900: oklch(0.208 0.042 265.755) dark:text-slate-400 dark:hover:text-slate-200`}>
                             {translations[lang].hero.name}
                         </h1>
                     </div>
