@@ -38,7 +38,7 @@ const About: React.FC<HeroProps> = ({ theme,lang }) => {
                             <User
                                 className={`w-6 h-7 text-${theme}-700 hover:text-${theme}-600 font-black  dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
-                            <h3 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-100">
+                            <h3 className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
                                
                                {translations[lang].about.story}
                             </h3>
@@ -77,12 +77,12 @@ const About: React.FC<HeroProps> = ({ theme,lang }) => {
                             <Code
                                 className={`w-6 h-7  text-${theme}-700 hover:text-${theme}-600 font-black dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                             />
-                            <h2 className="font-semibold text-2xl dark:text-slate-400 dark:hover:text-slate-100">
+                            <h2 className={`font-semibold text-2xl dark:text-${theme}-400 dark:hover:text-${theme}-200`}>
                                 {translations[lang].about.iDo}
                             </h2>
                         </div>
                         <div
-                            className={`space-y-4 dark:hover:text-${theme}-200 dark:text-${theme}-100 `}
+                            className={`space-y-4 dark:hover:text-${theme}-400 dark:text-${theme}-200 `}
                         >
                             {iDo.map((item) => (
                                 <div
@@ -93,7 +93,7 @@ const About: React.FC<HeroProps> = ({ theme,lang }) => {
                                     ></div>
                                     {item}
                                     <span
-                                        className={`text-slate-600 hover:text-${theme}-600 dark:text-${theme}-400 dark:hover:text-${theme}-200`}
+                                        className={`text-slate-600 hover:text-${theme}-400 dark:text-${theme}-400 dark:hover:text-${theme}-200`}
                                     ></span>
                                 </div>
                             ))}

@@ -80,7 +80,9 @@ dark:hover:bg-red-200 dark:hover:bg-rose-200 dark:hover:bg-pink-200 dark:hover:b
  border-red-500/60 border-rose-500/60 border-pink-500/60 border-yellow-500/60 border-green-500/60 border-purple-500/60 border-blue-500/60 border-slate-500/60  
  hover:border-red-700/60 hover:border-rose-700/60 hover:border-pink-700/60 hover:border-yellow-700/60 hover:border-green-700/60 hover:border-purple-700/60 hover:border-blue-700/60 hover:border-slate-700/60  
  dark:hover:border-red-300 dark:hover:border-rose-300 dark:hover:border-pink-300 dark:hover:border-yellow-300 dark:hover:border-green-300 dark:hover:border-purple-300 dark:hover:border-blue-300 dark:hover:border-slate-300
-  
+dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950
+ dark:via-red-900 dark:via-rose-900 dark:via-pink-900 dark:via-yellow-900 dark:via-green-900 dark:via-purple-900 dark:via-blue-900 dark:via-slate-900 
+ dark:to-red-950 dark:to-rose-950 dark:to-pink-950 dark:to-yellow-950 dark:to-green-950 dark:to-purple-950 dark:to-blue-950 dark:to-slate-950
 `;
                 }}
             </>

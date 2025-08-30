@@ -66,7 +66,7 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3
-                            className={`text-2xl font-semibold mb-8 dark:text-${theme}-500 dark:hover:text-${theme}-200`}
+                            className={`text-2xl font-semibold mb-8 dark:text-${theme}-500`}
                         >
                             Let's Connect!
                         </h3>
@@ -82,11 +82,11 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                         className={`flex items-center p-4 bg-white/10 rounded-lg border border-${theme}-400/20 hover:border-${theme}-400/80 dark:bg-slate-200 dark:hover:bg-slate-100 transition-all duration-300 group`}
                                     >
                                         <Icon
-                                            className={`w-6 h-6 text-${theme}-500 dark:text-${theme}-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]`}
+                                            className="w-6 h-6 text-slate-600 dark:text-slate-200 mr-4 transition-all duration-300 transform transform-gpu group-hover:scale-[1.1]"
                                         />
                                         <div>
                                             <div
-                                                className={`font-medium dark:text-${theme}-500 dark:hover:text-${theme}-600`}
+                                                className="font-medium dark:text-slate-600"
                                             >
                                                 {social.title}
                                             </div>
@@ -119,7 +119,7 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-300 dark:hover:border-${theme}-500 dark:text-${theme}-700 dark:hover:text-${theme}-200 focus:outline-none focus:ring-1 transition-all duration-500 text-slate-500 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-300 dark:hover:border-${theme}-500 dark:text-slate-700  focus:outline-none focus:ring-1 transition-all duration-500 text-slate-700 placeholder:text-slate-400`}
                                 />
                             </div>
 
@@ -157,7 +157,7 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-slate-200 dark:hover:bg-slate-100 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-${theme}-700 dark:hover:text-${theme}-200 transition-all duration-500 text-${theme}-500 placeholder:text-slate-400`}
+                                    className={`w-full p-2 border border-gray-300 rounded-lg focus:border-slate-400 focus:ring-gray-400 focus:outline-none focus:ring-1  dark:bg-slate-200 dark:hover:bg-slate-200 dark:border-${theme}-700 dark:hover:border-${theme}-200 dark:text-slate-800 dark:hover:text-slate-900 transition-all duration-500 text-slate-800 placeholder:text-slate-100`}
                                     style={{ resize: 'none' }}
                                 />
                             </div>
@@ -165,7 +165,7 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                             <div className="m-4">
                                 <button
                                     type="submit"
-                                    className={`w-full bg-gradient-to-r from-${theme}-400 to-${theme}-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300 text-${theme}-700 py-3 dark:text-${theme}-700 dark:hover:text-${theme}-600 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer`}
+                                    className={`w-full bg-gradient-to-r from-${theme}-400 to-${theme}-500 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-600 text-slate-900 py-3 dark:text-slate-900 dark:hover:text-slate-900 transition-all duration-300 transform-gpu hover:slate-[1.01] shadow-md cursor-pointer`}
                                 >
                                     Send Message
                                 </button>

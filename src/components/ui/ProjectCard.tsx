@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
                 ></div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-lg font-semibold mb-3 text-slate-800 group-hover:text-slate-600 duration-300 transition-colors dark:text-slate-900 dark:hover:text-slate-900 ">
+                <h3 className={`text-lg font-semibold mb-3 text-${theme}-600 group-hover:text-${theme}-800 duration-300 transition-colors dark:text-${theme}-900 dark:hover:text-${theme}-800`}>
                     {project.title}
                 </h3>
                 <p className="text-slate-600 text-sm mb-4 leading-relaxed flex-grow  dark:text-slate-300 dark:hover:text-slate-100">
@@ -52,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
                     <a
                         href={project.liveURL}
                         target="_blank"
-                        className="flex-1 text-slate-700 bg-gradient-to-r from-slate-300 to-slate-400 hover:text-gray-900 hover:shadow-lg  dark:text-slate-600 dark:hover:text-slate-900 text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform transform-gpu hover:scale-[1.01]"
+                        className={`flex-1 text-${theme}-700 bg-gradient-to-r from-${theme}-400 to-${theme}-500 hover-${theme}-600 hover:shadow-lg  dark:text-${theme}-900 dark:hover:text-${theme}-800 text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform transform-gpu hover:scale-[1.01]`}
                     >
                         Live Demo
                     </a>

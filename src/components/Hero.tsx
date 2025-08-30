@@ -54,13 +54,13 @@ const Hero: React.FC<HeroProps> = ({ theme ,lang}) => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <button
                             onClick={() => scrollSection('projects')}
-                            className={`px-8 py-4 bg-gradient-to-r from-${theme}-400 to-${theme}-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-300  dark:text-slate-800 dark:hover:text-slate-800`}
+                            className={`px-8 py-4 bg-gradient-to-r from-${theme}-400 to-${theme}-500 text-white border border-${theme}-300 font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-slate-900 dark:hover:text-slate-300`}
                         >
                              {translations[lang].hero.work}
                         </button>
                         <button
                             onClick={() => scrollSection('contact')}
-                            className="px-8 py-4 text-blue-400 font-semibold rounded-lg border border-sky-300 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-slate-400 dark:hover:text-slate-500"
+                            className={`px-8 py-4 text-${theme}-400 font-semibold rounded-lg border border-${theme}-300 hover:bg-${theme}-50 hover:text-${theme}-600 transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-sky-200  dark:text-slate-900 dark:hover:text-slate-300`}
                         >
                             {translations[lang].hero.touch}
                         </button>
