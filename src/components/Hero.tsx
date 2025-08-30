@@ -17,13 +17,13 @@ const Hero: React.FC<HeroProps> = ({ theme, lang }) => {
     return (
         <section
             id="home"
-            className={`relative min-h-screen bg-gradient-to-br from-${theme}-100 via-slate-50`}
+            className={`relative min-h-screen bg-gradient-to-br from-${theme}-100 via-${theme}-50`}
         >
             <div
                 className={`flex flex-col md:flex-row items-center justify-center min-h-screen gap-12 p-8 relative z-10 bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
             >
                 <div className="flex-shrink-0">
-                    <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/20 mt-8">
+                    <div className="w-90 h-90 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/20 mt-8">
                         <img
                             className="w-full h-full object-cover"
                             src="/portfolio/ziba.png"
@@ -31,9 +31,11 @@ const Hero: React.FC<HeroProps> = ({ theme, lang }) => {
                         />
                     </div>
                 </div>
-                <div className="text-center md:text-left max-w-2xl">
+                <div className="text-center md:text-center max-w-2xl">
                     <div className="mb-6">
-                        <h1 className={`text-4xl md:text-5xl font-bold color-slate-900: oklch(0.208 0.042 265.755) dark:text-slate-400 dark:hover:text-slate-200`}>
+                        <h1
+                            className={`text-4xl md:text-5xl font-bold color-slate-900: oklch(0.208 0.042 265.755) dark:text-slate-400 dark:hover:text-slate-200`}
+                        >
                             {translations[lang].hero.name}
                         </h1>
                     </div>

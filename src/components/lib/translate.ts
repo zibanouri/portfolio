@@ -15,9 +15,16 @@ export const translations = {
             theme: 'Theme',
             language: 'Language',
         },
+
         about: {
-            story: 'My Story',
-            iDo: 'What I Do',
+            storyTitle: 'My Story',
+            story: `I'm rebuilding my life one line of code, one German word, one day at a time.
+A single mother of two, I chose action over pain, and coding became my strength.
+Despite betrayal and hardship in Iran, I fight to grow, learn, and stand on my own.
+This code is my courage. My promise to my children: I will not give up. I will save us.
+This is my life. I’m not stopping. I’m coming.`,
+            iDoTitle: 'What I Do',
+            iDo: ['Front-End Development', 'TypeScript', 'React.js'],
         },
     },
     de: {
@@ -42,9 +49,16 @@ export const translations = {
             theme: 'Thema',
             language: 'Sprache',
         },
+
         about: {
-            story: 'Meine Geschichte',
-            iDo: 'Was ich mache',
+            storyTitle: 'Meine Geschichte',
+            story: `Ich baue mein Leben neu auf, Zeile für Zeile Code, ein deutsches Wort, einen Tag nach dem anderen.
+Als alleinerziehende Mutter von zwei Kindern habe ich mich für Handeln statt Schmerz entschieden, und das Programmieren wurde zu meiner Stärke.
+Trotz Verrat und harten Zeiten im Iran kämpfe ich dafür, zu wachsen, zu lernen und auf eigenen Füßen zu stehen.
+Dieser Code ist mein Mut. Meine Versprechen an meine Kinder: Ich werde nicht aufgeben. Ich werde uns retten.
+Das ist mein Leben. Ich halte nicht an. Ich komme.`,
+            iDoTitle: 'Was ich mache',
+            iDo: ['Frontend-Entwicklung', 'TypeScript', 'React.js'],
         },
     },
     ja: {
@@ -64,8 +78,14 @@ export const translations = {
             language: '言語',
         },
         about: {
-            story: '私の物語',
-            iDo: '私がしていること',
+            storyTitle: '私の物語',
+            story: `私は1行のコード、1つのドイツ語の単語、1日ずつ人生を再構築しています。
+2人の子を持つシングルマザーとして、痛みよりも行動を選ぶことを決めました。そして、コーディングが私の力になりました。
+イランでの裏切りや苦難にもかかわらず、成長し、学び、自立するために戦っています。
+このコードは私の勇気です。子どもたちへの約束：あきらめない。移住し、私たちを救う。
+これが私の人生です。止まらない。必ずや、私はやってくる。`,
+            iDoTitle: '私がすること',
+            iDo: ['フロントエンド開発', 'TypeScript', 'React.js'],
         },
     },
 } as const;

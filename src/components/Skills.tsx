@@ -10,8 +10,8 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
         {
             title: 'Fundamentals',
             skills: [
-                { name: 'HTML', level: 40 },
-                { name: 'CSS', level: 65 },
+                { name: 'HTML', level: 80 },
+                { name: 'CSS', level: 85 },
                 { name: 'javascript', level: 35 },
             ],
         },
@@ -22,7 +22,6 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
                 { name: 'SASS/SCSS', level: 90 },
                 { name: 'TailwindCSS', level: 80 },
                 { name: 'Git + GitHub', level: 55 },
-                { name: ' Bootstrap', level: 75 },
             ],
         },
 
@@ -31,8 +30,7 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
             skills: [
                 { name: 'React.js', level: 50 },
                 { name: 'State Management', level: 50 },
-                { name: 'Routing ', level: 75 },
-                { name: 'Node.js ', level: 75 },
+                { name: 'javascript ', level: 45 },
             ],
         },
     ];
