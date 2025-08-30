@@ -1,10 +1,12 @@
 import { Linkedin, Mail, Github, Instagram } from 'lucide-react';
+import { translations, type Language } from './lib/translate';
 
 interface FooterProps {
     theme: string;
+    lang: Language;
 }
 
-const Footer: React.FC<FooterProps> = ({ theme }) => {
+const Footer: React.FC<FooterProps> = ({ theme, lang }) => {
     const currentYear = new Date().getFullYear();
     const socialLinks = [
         {
@@ -31,20 +33,16 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
 
     return (
         <footer
-            className={`py-12 px-4 border-t border-gray-500/30 bg-gradient-to-br from-${theme}-100 via-slate-50 backdrop-blur-sm bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
+            className={`py-12 px-4 border-t border-gray-500/30 bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 backdrop-blur-sm`}
         >
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0 text-center md:text-left">
-                        <div
-                            className={`text-2xl font-bold text-${theme}-400 bg-clip-text mb-2`}
-                        >
+                        <div className={`text-2xl font-bold text-${theme}-600 dark:text-${theme}-400`}>
                             Ziba Nouri
                         </div>
-                        <p
-                            className={`text-${theme}-300 text-sm dark:text-${theme}-300`}
-                        >
-                            Fulfilling a 20-year-old dream with programming
+                        <p className={`text-${theme}-600 dark:text-${theme}-400 text-sm`}>
+                            {translations[lang].footer.tagline}
                         </p>
                     </div>
 
@@ -57,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-all duration-300 transform transform-gpu hover:scale-110 p-2 rounded-lg hover:bg-black/5"
+                                    className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-all duration-300 transform hover:scale-110 p-2 rounded-lg hover:bg-black/5"
                                     aria-label={social.name}
                                     title={social.name}
                                 >
@@ -68,15 +66,14 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
                     </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-black/30 text-center">
-                    <p className="text-gray-900 text-sm">
-                        © {currentYear} Ziba Nouri. All Rights Reserved. Made
-                        with love by{' '}
+                <div className="mt-8 pt-6 border-t border-gray-500/30 text-center">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm">
+                        © {currentYear} Ziba Nouri. {translations[lang].footer.rights}{' '}
                         <a
                             href="https://github.com/zibanouri"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-slate-800 hover:text-slate-800 dark:hover:text-slate-200 dark:text-slat-950 hover:underline transition-all duration-300"
+                            className="text-slate-800 hover:underline dark:text-slate-200 transition-all duration-300 font-medium"
                         >
                             ✨Ziba
                         </a>

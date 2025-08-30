@@ -1,5 +1,6 @@
 import { Github } from 'lucide-react';
 import React from 'react';
+import { translations, type Language } from '../lib/translate';
 
 interface Project {
     imageURL: string;
@@ -14,10 +15,10 @@ interface ProjectCardProps {
     project: Project;
     index: number;
     theme: string;
+     lang: Language;
+    }
 
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme,lang }) => {
     return (
         <div className={`bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-${theme}-400/20 hover:border-${theme}-400/80 dark:text-slate-400 dark:hover:text-slate-200 bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 transition-all duration-300 group flex flex-col h-full`}>
             <div className="relative overflow-hidden">
