@@ -111,7 +111,7 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     htmlFor="name"
                                     className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300"
                                 >
-                                    {translations[lang].form.name}
+                                    lets contact
                                 </label>
                                 <input
                                     type="text"
