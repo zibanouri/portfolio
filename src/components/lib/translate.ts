@@ -34,7 +34,66 @@ This is my life. I’m not stopping. I’m coming.`,
       send: 'Send Message',
       success: 'Thank You! Your message has been sent successfully!',
     },
-   
+    projects:[
+        {
+            imageURL: '/portfolio/project-image/project1.webp',
+            title: 'portfolio',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
+        },
+        {
+            imageURL: '/portfolio/project-image/project2.webp',
+            title: 'SolsticeTheme',
+
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
+        },
+        {
+            imageURL: '/portfolio/project-image/project3.webp',
+            title: 'Arika',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
+        },
+        {
+            imageURL: '/portfolio/project-image/project4.webp',
+            title: 'zibanouri',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
+        },
+        {
+            imageURL: '/portfolio/project-image/project5.webp',
+            title: 'nubar',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
+        },
+        {
+            imageURL: '/portfolio/project-image/project6.webp',
+            title: 'portfolio',
+            description:
+                'This repository is a practice portfolio for learning React and is very important.',
+            topics: ['React', 'Tailwind', 'Javascript'],
+            liveURL: '#',
+            githubURL: ' https://github.com/zibanouri/portfolio',
+        },
+    ],
+    labels: {
+      liveDemo: 'Live Demo',
+    },
     footer: {
       tagline: 'Fulfilling a 20-year-old dream with programming',
       rights: 'All Rights Reserved. Made with love by',
@@ -75,7 +134,65 @@ Das ist mein Leben. Ich halte nicht an. Ich komme.`,
       send: 'Nachricht senden',
       success: 'Danke! Ihre Nachricht wurde erfolgreich gesendet!',
     },
-   
+    projects: [
+    {
+        imageURL: '/portfolio/project-image/project1.webp',
+        title: 'portfolio',
+        description:
+            'Dieses Repository ist ein Übungsportfolio zum Erlernen von React und ist sehr wichtig.',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project2.webp',
+        title: 'SolsticeTheme',
+        description:
+            'Dieses Repository ist ein Übungsportfolio zum Erlernen von React und ist sehr wichtig.',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project3.webp',
+        title: 'Arika',
+        description:
+            'Dieses Repository ist ein Übungsportfolio zum Erlernen von React und ist sehr wichtig.',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project4.webp',
+        title: 'zibanouri',
+        description:
+            'Dieses Repository ist ein Übungsportfolio zum Erlernen von React und ist sehr wichtig.',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project5.webp',
+        title: 'nubar',
+        description:
+            'Dieses Repository ist ein Übungsportfolio zum Erlernen von React und ist sehr wichtig.',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project6.webp',
+        title: 'portfolio',
+        description:
+            'Dieses Repository ist ein Übungsportfolio zum Erlernen von React und ist sehr wichtig.',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+],
+    labels: {
+      liveDemo: 'Live-Demo',
+    },
     footer: {
       tagline: 'Erfülle einen 20 Jahre alten Traum mit Programmierung',
       rights: 'Alle Rechte vorbehalten. Mit Liebe gemacht von ',
@@ -116,33 +233,69 @@ Das ist mein Leben. Ich halte nicht an. Ich komme.`,
       send: '送信する',
       success: 'ありがとうございます！メッセージが正常に送信されました！',
     },
+    projects: [
+    {
+        imageURL: '/portfolio/project-image/project1.webp',
+        title: 'portfolio',
+        description:
+            'このリポジトリは、Reactを学ぶための練習用ポートフォリオであり、非常に重要です。',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project2.webp',
+        title: 'SolsticeTheme',
+        description:
+            'このリポジトリは、Reactを学ぶための練習用ポートフォリオであり、非常に重要です。',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project3.webp',
+        title: 'Arika',
+        description:
+            'このリポジトリは、Reactを学ぶための練習用ポートフォリオであり、非常に重要です。',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project4.webp',
+        title: 'zibanouri',
+        description:
+            'このリポジトリは、Reactを学ぶための練習用ポートフォリオであり、非常に重要です。',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project5.webp',
+        title: 'nubar',
+        description:
+            'このリポジトリは、Reactを学ぶための練習用ポートフォリオであり、非常に重要です。',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+    {
+        imageURL: '/portfolio/project-image/project6.webp',
+        title: 'portfolio',
+        description:
+            'このリポジトリは、Reactを学ぶための練習用ポートフォリオであり、非常に重要です。',
+        topics: ['React', 'Tailwind', 'Javascript'],
+        liveURL: '#',
+        githubURL: ' https://github.com/zibanouri/portfolio  ',
+    },
+],
+    labels: {
+      liveDemo: 'ライブデモ',
+    },
     footer: {
       tagline: '20年間の夢をプログラミングで叶えています',
       rights: '全著作権所有.の愛を込めて作成',
     },
-   
-
-en: {
-
-  projects: {
-    liveDemo: 'Live Demo',
-  },
-},
-
-de: {
-
-  projects: {
-    liveDemo: 'Live-Demo',
-  },
-},
-
-ja: {
-
-  projects: {
-    liveDemo: 'ライブデモ',
-  },
-},
   },
 } as const;
-
 export type Language = keyof typeof translations;

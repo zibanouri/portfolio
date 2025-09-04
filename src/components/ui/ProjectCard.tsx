@@ -6,7 +6,7 @@ interface Project {
     imageURL: string;
     title: string;
     description: string;
-    topics: string[];
+    topics: readonly string[];
     liveURL: string;
     githubURL: string;
 }
@@ -55,12 +55,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme,lang }) => {
                         target="_blank"
                         className={`flex-1 text-${theme}-700 bg-gradient-to-r from-${theme}-400 to-${theme}-500 hover-${theme}-600 hover:shadow-lg  dark:text-${theme}-900 dark:hover:text-${theme}-800 text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform transform-gpu hover:scale-[1.01]`}
                     >
-                        Live Demo
+         {translations[lang].labels.liveDemo}
                     </a>
                     <a
                         href={project.githubURL}
                         target="_blank"
                         className="text-slate-500 hover:text-gray-400 transition-all duration-300 transform transform-gpu hover:scale-[1.1] p-2 rounded-lg hover:bg-gray-500/5"
+                        aria-label={`View ${project.title} on GitHub`}
+                    
                     >
                         <Github className="w-5 h-5" />
                     </a>
