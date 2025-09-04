@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme,lang }) => {
                 />
                 <div
                     className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-700/20
-                        opacity-60 group-hover:opacity-20  dark:bg-slate-400 dark:hover:bg-slate-600 transition-opacity duration-300"
+                        opacity-60 group-hover:opacity-30  dark:bg-slate-400 dark:hover:bg-slate-600 transition-opacity duration-300"
                 ></div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
