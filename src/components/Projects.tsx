@@ -6,10 +6,10 @@ interface ProjectsProps {
     lang: Language;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ theme ,lang }) => {
+const Projects: React.FC<ProjectsProps> = ({ theme, lang }) => {
     return (
         <section
-            id='project'
+            id="project"
             className={`py-20 px-4 relative min-h-screen bg-gradient-to-br from-${theme}-100 via-${theme}-50  text-4xl text-left dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800 `}
             aria-labelledby="projects-title"
         >

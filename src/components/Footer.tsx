@@ -38,10 +38,14 @@ const Footer: React.FC<FooterProps> = ({ theme, lang }) => {
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0 text-center md:text-left">
-                        <div className={`text-2xl font-bold text-${theme}-600 dark:text-${theme}-400`}>
+                        <div
+                            className={`text-2xl font-bold text-${theme}-600 dark:text-${theme}-400`}
+                        >
                             Ziba Nouri
                         </div>
-                        <p className={`text-${theme}-600 dark:text-${theme}-400 text-sm`}>
+                        <p
+                            className={`text-${theme}-600 dark:text-${theme}-400 text-sm`}
+                        >
                             {translations[lang].footer.tagline}
                         </p>
                     </div>
@@ -68,7 +72,8 @@ const Footer: React.FC<FooterProps> = ({ theme, lang }) => {
 
                 <div className="mt-8 pt-6 border-t border-gray-500/30 text-center">
                     <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        © {currentYear} Ziba Nouri. {translations[lang].footer.rights}{' '}
+                        © {currentYear} Ziba Nouri.{' '}
+                        {translations[lang].footer.rights}{' '}
                         <a
                             href="https://github.com/zibanouri"
                             target="_blank"
