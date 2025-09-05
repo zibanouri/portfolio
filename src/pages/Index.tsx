@@ -83,6 +83,7 @@ dark:hover:bg-red-200 dark:hover:bg-rose-200 dark:hover:bg-pink-200 dark:hover:b
 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950 dark:from-red-950
  dark:via-red-900 dark:via-rose-900 dark:via-pink-900 dark:via-yellow-900 dark:via-green-900 dark:via-purple-900 dark:via-blue-900 dark:via-slate-900 
  dark:to-red-950 dark:to-rose-950 dark:to-pink-950 dark:to-yellow-950 dark:to-green-950 dark:to-purple-950 dark:to-blue-950 dark:to-slate-950
+ bg-red-300 bg-rose-300 bg-pink-300 bg-yellow-300 bg-green-300 bg-blue-300 bg-purple-300 bg-slate-300 
 `;
                 }}
             </>
