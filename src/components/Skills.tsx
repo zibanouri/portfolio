@@ -39,7 +39,7 @@ const Skills: React.FC<SkillsProps> = ({ theme, lang }) => {
 
     return (
         <section
-            id="skills"
+            id={translations[lang].navbar.title[2]}
             className={`py-20 px-4 bg-gradient-to-br from-${theme}-100 via-${theme}-50  dark:bg-gradient-to-br dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
         >
             <div className="max-w-6xl mx-auto">
@@ -49,7 +49,7 @@ const Skills: React.FC<SkillsProps> = ({ theme, lang }) => {
                     {SkillCategory.map((category) => (
                         <div
                             key={category.title}
-                            className={`bg-slate-100 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-300 hover:border-${theme}-500 transition-all duration-300 shadow-sm hover:shadow-md  dark:bg-slate-700 `}
+                            className={`bg-slate-50 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-300 hover:border-${theme}-500 transition-all duration-300 shadow-sm hover:shadow-md  dark:bg-slate-700 `}
                         >
                             <div className="flex items-center mb-6 ">
                                 <Code

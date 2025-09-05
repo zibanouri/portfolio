@@ -10,7 +10,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ theme, lang }) => {
     return (
         <section
-            id="about"
+            id={translations[lang].navbar.title[1]}
             className={`py-20 px-4 relative min-h-screen bg-gradient-to-br from-${theme}-100 via-${theme}-50 dark:from-${theme}-800 dark:via-${theme}-900 dark:to-${theme}-800`}
         >
             <div className="max-w-6xl mx-auto px-6">

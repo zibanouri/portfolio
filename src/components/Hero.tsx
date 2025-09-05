@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ theme, lang }) => {
 
     return (
         <section
-            id="home"
+            id={translations[lang].navbar.title[0]}
             className={`relative min-h-screen bg-gradient-to-br from-${theme}-100 via-${theme}-50`}
         >
             <div
