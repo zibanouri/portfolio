@@ -121,10 +121,10 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className={`w-full p-2 border border-slate-300 rounded-lg 
-                                      focus:ring-2 focus:ring-${theme}-500 focus:ring-offset-2 focus:border-transparent
+                                    className={`w-full p-2 border border-slate-600 rounded-lg 
+                                      focus:ring-2 focus:ring-slate-50 focus:ring-offset-2 focus:border-transparent
                                       transition-all duration-300 resize-none
-                                      dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100`}
+                                      dark:bg-slate-800/60 dark:text-slate-100`}
                                 />
                             </div>
 
@@ -143,10 +143,10 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="your email@example.com"
-                                    className={`w-full p-2 border border-slate-300 rounded-lg 
-                                                                      focus:ring-2 focus:ring-${theme}-500 focus:ring-offset-2 focus:border-transparent
-                                                                      transition-all duration-300 resize-none
-                                                                      dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100`}
+                                    className={`w-full p-2 border border-slate-600 rounded-lg 
+                                      focus:ring-2 focus:ring-slate-50 focus:ring-offset-2 focus:border-transparent
+                                      transition-all duration-300 resize-none
+                                      dark:bg-slate-800/60 dark:text-slate-100`}
                                 />
                             </div>
 
@@ -165,10 +165,10 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className={`w-full p-2 border border-slate-300 rounded-lg 
-                                      focus:ring-2 focus:ring-${theme}-500 focus:ring-offset-2 focus:border-transparent
+                                    className={`w-full p-2 border border-slate-600 rounded-lg 
+                                      focus:ring-2 focus:ring-slate-50 focus:ring-offset-2 focus:border-transparent
                                       transition-all duration-300 resize-none
-                                      dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100`}
+                                      dark:bg-slate-800/60 dark:text-slate-100`}
                                 />
                             </div>
 
