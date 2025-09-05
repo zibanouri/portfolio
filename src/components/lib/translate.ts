@@ -9,6 +9,7 @@ export const translations = {
             hello: 'Hello friends',
             work: 'View My Work',
             touch: 'Get In Touch',
+            lets: 'Lets contact!',
         },
         sidebar: {
             mode: 'Mode',
@@ -115,6 +116,7 @@ This is my life. I’m not stopping. I’m coming.`,
             hello: 'Hallo zusammen',
             work: 'Meine Arbeiten ansehen',
             touch: 'Kontakt aufnehmen',
+            lets: 'Lass uns in Kontakt treten!',
         },
         sidebar: {
             mode: 'Modus',
@@ -214,6 +216,7 @@ Das ist mein Leben. Ich halte nicht an. Ich komme.`,
             hello: 'こんにちは',
             work: '作品を見る',
             touch: 'お問い合わせ',
+            lets: '連絡しましょう！',
         },
         sidebar: {
             mode: 'モード',

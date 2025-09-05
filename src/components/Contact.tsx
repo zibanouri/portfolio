@@ -74,7 +74,7 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                         <h3
                             className={`text-2xl font-semibold mb-8 text-${theme}-700 dark:text-${theme}-400`}
                         >
-                            Let's Connect!
+                            {translations[lang].hero.lets}
                         </h3>
                         <div className="space-y-6">
                             {socials.map((social) => {
@@ -93,7 +93,7 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                                 {social.title}
                                             </div>
                                             <div
-                                                className={`text-sm text-${theme}-600 dark:text-${theme}-400`}
+                                                className={`text-sm text-slate-600 dark:text-slate-400`}
                                             >
                                                 {social.displayURL}
                                             </div>
@@ -111,7 +111,7 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     htmlFor="name"
                                     className="block text-sm font-medium mb-1 text-slate-700 dark:text-slate-300"
                                 >
-                                    lets contact
+                                    {translations[lang].hero.lets}
                                 </label>
                                 <input
                                     type="text"
@@ -121,9 +121,10 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Your name"
-                                    className={`w-full p-2 border rounded-lg focus:ring focus:ring-offset-2 transition-all duration-300
-                                        dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100 
-                                        border-slate-300 focus:border-${theme}-500 focus:ring-${theme}-200`}
+                                    className={`w-full p-2 border border-slate-300 rounded-lg 
+                                      focus:ring-2 focus:ring-${theme}-500 focus:ring-offset-2 focus:border-transparent
+                                      transition-all duration-300 resize-none
+                                      dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100`}
                                 />
                             </div>
 
@@ -142,9 +143,10 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="your email@example.com"
-                                    className={`w-full p-2 border rounded-lg focus:ring focus:ring-offset-2 transition-all duration-300
-                                        dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100 
-                                        border-slate-300 focus:border-${theme}-500 focus:ring-${theme}-200`}
+                                    className={`w-full p-2 border border-slate-300 rounded-lg 
+                                                                      focus:ring-2 focus:ring-${theme}-500 focus:ring-offset-2 focus:border-transparent
+                                                                      transition-all duration-300 resize-none
+                                                                      dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100`}
                                 />
                             </div>
 
@@ -163,9 +165,10 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                                     required
                                     rows={8}
                                     placeholder="Tell Me About Your Project..."
-                                    className={`w-full p-2 border rounded-lg focus:ring focus:ring-offset-2 transition-all duration-300 resize-none
-                                        dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100 
-                                        border-slate-300 focus:border-${theme}-500 focus:ring-${theme}-200`}
+                                    className={`w-full p-2 border border-slate-300 rounded-lg 
+                                      focus:ring-2 focus:ring-${theme}-500 focus:ring-offset-2 focus:border-transparent
+                                      transition-all duration-300 resize-none
+                                      dark:bg-slate-800/60 dark:border-slate-600 dark:text-slate-100`}
                                 />
                             </div>
 
