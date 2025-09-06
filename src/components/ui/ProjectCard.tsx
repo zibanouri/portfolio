@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme,lang }) => {
                     <a
                         href={project.liveURL}
                         target="_blank"
-                        className={`flex-1 text-${theme}-800 bg-${theme}-500 border border-slate-800
+                        className={`flex-1 text-${theme}-800 bg-${theme}-200 border border-slate-800
                           hover:shadow-lg  dark:text-${theme}-900 dark:hover:text-${theme}-800 
                          text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform
                           transform-gpu hover:scale-[1.01]`}
