@@ -39,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ theme, lang }) => {
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0 text-center md:text-left">
                         <div
-                            className={`text-2xl font-bold text-${theme}-600 dark:text-${theme}-400`}
+                            className={`text-2xl font-bold text-slate-800 dark:text-slate-200`}
                         >
                             Ziba Nouri
                         </div>

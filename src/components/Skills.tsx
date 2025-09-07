@@ -77,9 +77,11 @@ const Skills: React.FC<SkillsProps> = ({ theme, lang }) => {
                                                 {skill.level}%
                                             </span>
                                         </div>
-                                        <div className="w-full bg-${theme}-100 rounded-full h-2  dark:text-${theme}-400 dark:hover:text-${theme}-200  dark:bg-slate-200 dark:hover:bg-slate-200">
+                                        <div
+                                            className={`w-full bg-${theme}-100 rounded-full h-2  dark:text-${theme}-400 dark:hover:text-${theme}-200  dark:bg-slate-200 dark:hover:bg-slate-200`}
+                                        >
                                             <div
-                                                className="bg-gradient-to-r from-slate-700 to-slate-600 h-2 rounded-full transition-all duration-300 ease-out  dark:text-slate-400 dark:hover:text-slate-300"
+                                                className="bg-gradient-to-r from-slate-300 to-slate-600 h-2 rounded-full transition-all duration-300 ease-out  dark:text-slate-400 dark:hover:text-slate-500"
                                                 style={{
                                                     width: `${skill.level}%`,
                                                 }}

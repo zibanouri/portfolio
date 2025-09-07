@@ -22,7 +22,7 @@ const About: React.FC<AboutProps> = ({ theme, lang }) => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* My Story */}
                     <div
-                        className={`bg-${theme}-200/60 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-500/60 hover:border-${theme}-700/60 dark:hover:border-${theme}-300 transition-all duration-300 text-slate-800 dark:text-slate-200`}
+                        className={`bg-${theme}-400 backdrop-blur-sm rounded-2xl p-8 border border-${theme}-500/60 hover:border-${theme}-700/60 dark:hover:border-${theme}-300 transition-all duration-300 text-slate-800 dark:text-slate-200`}
                     >
                         <div className="flex items-center mb-6 space-x-3">
                             <User
@@ -65,9 +65,9 @@ const About: React.FC<AboutProps> = ({ theme, lang }) => {
                         {/* Download Resume */}
                         <div className="mt-8">
                             <a href="/portfolio/Resume.pdf" download>
-                                <div className="inline-flex items-center text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-300 transition-colors">
+                                <div className="inline-flex items-center text-slate-700 hover:text-slate-500 dark:text-slate-300 dark:hover:text-slate-200 transition-colors">
                                     <Download className="h-5 w-5 mr-3" />
-                                    Download Resume
+                                    {translations[lang].about.download}
                                 </div>
                             </a>
                         </div>

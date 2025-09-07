@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme,lang }) => {
                     {project.topics.map((topic) => (
                         <span
                             key={topic}
-                            className="px-3 py-1 bg-slate-200 border border-slate-700 text-xs rounded-full font-medium hover:bg-slate-300 dark:bg-slate-400 dark:hover:bg-slate-200  dark:text-slate-600 dark:bg-gradient-to-br dark:hover:text-slate-900 "
+                            className="px-3 py-1 bg-slate-200 border border-slate-700 text-xs rounded-full font-medium hover:bg-slate-300 dark:bg-slate-200 dark:hover:bg-slate-100  dark:text-slate-600 dark:bg-gradient-to-br dark:hover:text-slate-700 "
                         >
                             {topic}
                         </span>
@@ -53,8 +53,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme,lang }) => {
                     <a
                         href={project.liveURL}
                         target="_blank"
-                        className={`flex-1 text-${theme}-800 bg-${theme}-200 border border-slate-800
-                          hover:shadow-lg  dark:text-${theme}-900 dark:hover:text-${theme}-800 
+                        className={`flex-1 text-${theme}-800 bg-slate-200 border border-slate-900
+                          hover:shadow-lg  dark:text-slate-700 dark:hover:text-slate-800 
                          text-center py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 transform
                           transform-gpu hover:scale-[1.01]`}
                     >

@@ -72,7 +72,7 @@ const Contact: React.FC<ContactProps> = ({ theme, lang }) => {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3
-                            className={`text-2xl font-semibold mb-8 text-${theme}-700 dark:text-${theme}-400`}
+                            className={`text-2xl font-semibold mb-8 text-${theme}-700 dark:text-slate-300`}
                         >
                             {translations[lang].hero.lets}
                         </h3>
