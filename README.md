@@ -17,3 +17,10 @@ This project is open-source and may be used as a template for your own portfolio
 1. Clone the repository:  
    ```bash
    git clone https://github.com/zibanouri/portfolio.git
+   ```
+## Contact
+For professional inquiries or collaboration opportunities:
+
+-Email: zn.zibanouri@gmail.com
+-LinkedIn: https://www.linkedin.com/in/ziba-nouri/
+```
