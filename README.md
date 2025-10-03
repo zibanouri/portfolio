@@ -10,14 +10,11 @@
 
 ### About This Project
 ```
-This portfolio is more than just a website — **it’s the story of my growth**.  
-Building it was my first deep dive into **React** and **JavaScript**. I learned about **components, state, useEffect, routing**, and how to craft a beautiful, responsive UI from scratch.
+This portfolio represents more than just a personal website — it embodies my journey of growth as a developer.
+Creating it marked my first in-depth exploration of React and JavaScript, during which I gained hands-on experience with components, state management, useEffect, client-side routing, and building a fully responsive, visually appealing user interface from the ground up.
 
-It’s also **multilingual** (English , deutsch and japan) and features a **customizable color theme** 
-
-- I felt so much joy knowing I was taking a real step toward my dreams.
+The project also supports multiple languages (English ,deutsch and japan) and includes a customizable color theme, reflecting my belief that the web should be both personalized and uplifting. 
 ```
-
 ###  Let’s Connect
 ```
 - https://github.com/zibanouri/portfolio
@@ -26,7 +23,6 @@ It’s also **multilingual** (English , deutsch and japan) and features a **cust
 ```
 ## License
 ```
-
 This project is open-source under the MIT License.
 
 ```
