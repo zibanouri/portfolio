@@ -10,36 +10,10 @@
 
 ### About This Project
 ```
+This portfolio represents more than just a personal website — it embodies my journey of growth as a developer.
+Creating it marked my first in-depth exploration of React and JavaScript, during which I gained hands-on experience with components, state management, useEffect, client-side routing, and building a fully responsive, visually appealing user interface from the ground up.
 
-This portfolio is more than just a website — **it’s the story of my growth**.  
-Building it was my first deep dive into **React** and **JavaScript**. I learned about **components, state, useEffect, routing**, and how to craft a beautiful, responsive UI from scratch.
-
-It’s also **multilingual** (English & Persian) and features a **customizable color theme** — because I believe the web should feel personal and joyful.
-
-- I felt so much joy knowing I was taking a real step toward my dreams.
-```
-
-###  Tech Stack
-```
-
-- **React.js** – for interactive UI components  
-- **React Router** – for seamless navigation  
-- **Context API** – to manage theme and language globally  
-- **CSS Modules / Styled Components** – for clean, scoped styling  
-- **i18n (react-i18next)** – supporting English & Persian  
-- **GitHub Pages** – for free, instant deployment
-
-```
-
-###  Key Features
-```
-
--  **Switchable themes** (Light / Dark / Colorful)  
--  **Multilingual support** (English + Persian)  
--  **Fully responsive** — works on mobile, tablet, and desktop  
--  **Optimized for performance**  
-- **Clean, maintainable code**
-
+The project also supports multiple languages (English ,deutsch and japan) and includes a customizable color theme, reflecting my belief that the web should be both personalized and uplifting. 
 ```
 ###  Let’s Connect
 ```
@@ -49,7 +23,6 @@ It’s also **multilingual** (English & Persian) and features a **customizable c
 ```
 ## License
 ```
-
 This project is open-source under the MIT License.
 
 ```
